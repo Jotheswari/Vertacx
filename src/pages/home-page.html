@@ -28,11 +28,11 @@
     <header class="sm:block md:hidden lg:hidden xl:hidden 2xl:hidden pt-10 pb-4 sticky top-0 bg-black z-50">
         <div class="flex items-center justify-between px-4">
             <img src="../assets/images/logo/vertacx-logo.svg" alt="Vertacx Logo" class="w-[155px] h-auto">
-            <button id="menuToggle" class="text-white focus:outline-none">
+            <button id="toggleButton" class="text-white focus:outline-none">
                 <img src="../assets/images/icons/menu-icon.svg" alt="menu-icon">
             </button>
         </div>
-        <nav id="sidebar" class="mt-4 px-4 hidden">
+        <nav id="sidebarMenu" class="mt-4 px-4 hidden">
             <ul class="space-y-4">
                 <li><a class="text-white hover:text-customGreen transition-colors" href="#home">Home</a></li>
                 <li><a class="text-white hover:text-customGreen transition-colors" href="#why-vertax">Why Vertax</a>
@@ -47,6 +47,7 @@
             </ul>
         </nav>
     </header>
+    
 
     <!-- Desktop Header -->
     <header class="hidden md:block py-20 sticky top-0 bg-black z-50">
@@ -119,22 +120,25 @@
             </section>
 
             <section class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="border border-green-400 rounded-2xl px-10 py-14 transform transition-transform hover:scale-105">
+                <div
+                    class="border border-green-400 rounded-2xl px-10 py-14 transform transition-transform hover:scale-105">
                     <img src="../assets/images/icons/book-icon.svg" alt="Bundled Soft Skills" class="w-18 h-18 mx-auto">
                     <h3 class="text-xl font-semibold mt-6 mb-3 text-white">Bundled Soft Skills</h3>
                     <p class="text-white">Vertacx offers agile-based learning programs led by industry mentors, focusing
                         on comprehensive software engineering skills and essential soft skills in a work-like
                         environment.</p>
                 </div>
-                
-                
-                <div class="border border-green-400 rounded-2xl px-10 py-14 transform transition-transform hover:scale-105">
+
+
+                <div
+                    class="border border-green-400 rounded-2xl px-10 py-14 transform transition-transform hover:scale-105">
                     <img src="../assets/images/icons/member-icon.svg" alt="1-on-1 Mentorship" class="w-18 h-18 mx-auto">
                     <h3 class="text-xl font-semibold mt-6 mb-3 text-white">1-on-1 Mentorship</h3>
                     <p class="text-white">Vertacx collaborates with tech companies to offer industry-relevant training
                         and 1-on-1 mentorship, along with real-world projects and internships.</p>
                 </div>
-                <div class="border border-green-400 rounded-2xl px-10 py-14 transform transition-transform hover:scale-105">
+                <div
+                    class="border border-green-400 rounded-2xl px-10 py-14 transform transition-transform hover:scale-105">
                     <img src="../assets/images/icons/session-icon.svg" alt="Interactive Sessions"
                         class="w-18 h-18 mx-auto">
                     <h3 class="text-xl font-semibold mt-6 mb-3 text-white">Interactive Sessions</h3>
@@ -143,91 +147,115 @@
                 </div>
             </section>
             <section class="mt-20">
-                <p class="mt-4 text-lg md:text-xl text-white md:text-base md:font-normal md:font-medium md:leading-28 md:tracking-wide lg:text-2xl lg:tracking-wider">How IT Works</p>
+                <p
+                    class="mt-4 text-lg md:text-xl text-white md:text-base md:font-normal md:font-medium md:leading-28 md:tracking-wide lg:text-2xl lg:tracking-wider">
+                    How IT Works</p>
                 <h2
-                class="text-3xl md:text-4xl font-bold text-white md:font-semibold md:tracking-[2.56px] md:leading-normal text-base sm:text-lg sm:font-medium sm:tracking-normal  sm:text-[20px]  sm:leading-[28px]">
-                Personalized learning at scale.
-            </h2>
+                    class="mt-3 mb-5 text-3xl md:text-4xl font-bold text-white md:font-semibold md:tracking-[2.56px] md:leading-normal text-base sm:text-lg sm:font-medium sm:tracking-normal  sm:text-[20px]  sm:leading-[28px]">
+                    Personalized learning at scale.
+                </h2>
             </section>
             <section class="container mx-auto">
                 <!-- Div 1 -->
-                <div class="rounded-md border border-white mb-4 collapse-parent">
-                    <div class="px-7 py-7 md:px-5 md:py-8 text-xl md:text-base font-semibold leading-normal md:leading-28 text-white text-left cursor-pointer collapse-toggle">
+                <div class="rounded-md border border-white mb-5 collapse-parent">
+                    <div
+                        class="px-7 py-7 md:px-5 md:py-8 text-xl md:text-base font-semibold leading-normal md:leading-28 text-white text-left cursor-pointer collapse-toggle">
                         <div class="flex justify-between items-center">
                             <h1>1. Career Assessments</h1>
                             <img src="../assets/images/icons/collapse-close-icon.svg" alt="" class="cursor-pointer">
                         </div>
                     </div>
                     <div class="accordion-content overflow-hidden transition-max-height duration-300 ease-out hidden">
-                        <p class="2xl:mx-96 2xl:mb-8 2xl:ml-12 text-left text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptas minima illo cupiditate perferendis est dolorum facere maxime error molestiae.</p>
+                        <p class="px-2 py-2 pt-0 pl-12 2xl:mx-96 2xl:mb-8 2xl:ml-0 text-left text-white">Lorem ipsum
+                            dolor sit amet consectetur adipisicing elit. Voluptates voluptas minima illo cupiditate
+                            perferendis est dolorum facere maxime error molestiae.</p>
                     </div>
                 </div>
-                
+
                 <!-- Div 2 -->
-                <div class="rounded-md border border-white mb-4 collapse-parent">
-                    <div class="px-7 py-7 md:px-5 md:py-8 text-xl md:text-base font-semibold leading-normal md:leading-28 text-white text-left cursor-pointer collapse-toggle">
+                <div class="rounded-md border border-white mb-5 collapse-parent">
+                    <div
+                        class="px-7 py-7 md:px-5 md:py-8 text-xl md:text-base font-semibold leading-normal md:leading-28 text-white text-left cursor-pointer collapse-toggle">
                         <div class="flex justify-between items-center">
                             <h1>2. Program Onboarding</h1>
                             <img src="../assets/images/icons/collapse-close-icon.svg" alt="" class="cursor-pointer">
                         </div>
                     </div>
                     <div class="accordion-content overflow-hidden transition-max-height duration-300 ease-out hidden">
-                        <p class="2xl:mx-96 2xl:mb-8 2xl:ml-12 text-left  text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil obcaecati mollitia quisquam quo delectus voluptas sint sed molestiae veritatis velit.</p>
+                        <p class="px-2 py-2 pt-0 pl-12 2xl:mx-96 2xl:mb-8 2xl:ml-0 text-left  text-white">Lorem ipsum
+                            dolor sit amet consectetur adipisicing elit. Nihil obcaecati mollitia quisquam quo delectus
+                            voluptas sint sed molestiae veritatis velit.</p>
                     </div>
                 </div>
-            
+
                 <!-- Div 3 -->
-                <div class="rounded-md border border-white mb-4 collapse-parent">
-                    <div class="px-7 py-7 md:px-5 md:py-8 text-xl md:text-base font-semibold leading-normal md:leading-28 text-white text-left cursor-pointer collapse-toggle">
+                <div class="rounded-md border border-white mb-5 collapse-parent">
+                    <div
+                        class="px-7 py-7 md:px-5 md:py-8 text-xl md:text-base font-semibold leading-normal md:leading-28 text-white text-left cursor-pointer collapse-toggle">
                         <div class="flex justify-between items-center">
                             <h1>3. Learning Sprint and retrospective</h1>
                             <img src="../assets/images/icons/collapse-close-icon.svg" alt="" class="cursor-pointer">
                         </div>
                     </div>
                     <div class="accordion-content overflow-hidden transition-max-height duration-300 ease-out hidden">
-                        <p class="2xl:mx-96 2xl:mb-8 2xl:ml-12 text-left  text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil obcaecati mollitia quisquam quo delectus voluptas sint sed molestiae veritatis velit.</p>
+                        <p class="px-2 py-2 pt-0 pl-12 2xl:mx-96 2xl:mb-8 2xl:ml-0 text-left  text-white">Lorem ipsum
+                            dolor sit amet consectetur adipisicing elit. Nihil obcaecati mollitia quisquam quo delectus
+                            voluptas sint sed molestiae veritatis velit.</p>
                     </div>
                 </div>
-            
+
                 <!-- Div 4 -->
-                <div class="rounded-md border border-white mb-4 collapse-parent">
-                    <div class="px-7 py-7 md:px-5 md:py-8 text-xl md:text-base font-semibold leading-normal md:leading-28 text-white text-left cursor-pointer collapse-toggle">
+                <div class="rounded-md border border-white mb-5 collapse-parent">
+                    <div
+                        class="px-7 py-7 md:px-5 md:py-8 text-xl md:text-base font-semibold leading-normal md:leading-28 text-white text-left cursor-pointer collapse-toggle">
                         <div class="flex justify-between items-center">
                             <h1>4. Capstone Project</h1>
                             <img src="../assets/images/icons/collapse-close-icon.svg" alt="" class="cursor-pointer">
                         </div>
                     </div>
                     <div class="accordion-content overflow-hidden transition-max-height duration-300 ease-out hidden">
-                        <p class="2xl:mx-96 2xl:mb-8 2xl:ml-12 text-left  text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil obcaecati mollitia quisquam quo delectus voluptas sint sed molestiae veritatis velit.</p>
+                        <p class="px-2 py-2 pt-0 pl-12 2xl:mx-96 2xl:mb-8 2xl:ml-0 text-left  text-white">Lorem ipsum
+                            dolor sit amet consectetur adipisicing elit. Nihil obcaecati mollitia quisquam quo delectus
+                            voluptas sint sed molestiae veritatis velit.</p>
                     </div>
                 </div>
-            
+
                 <!-- Div 5 -->
-                <div class="rounded-md border border-white mb-4 collapse-parent">
-                    <div class="px-7 py-7 md:px-5 md:py-8 text-xl md:text-base font-semibold leading-normal md:leading-28 text-white text-left cursor-pointer collapse-toggle">
+                <div class="rounded-md border border-white mb-5 collapse-parent">
+                    <div
+                        class="px-7 py-7 md:px-5 md:py-8 text-xl md:text-base font-semibold leading-normal md:leading-28 text-white text-left cursor-pointer collapse-toggle">
                         <div class="flex justify-between items-center">
                             <h1>5. Internship</h1>
                             <img src="../assets/images/icons/collapse-close-icon.svg" alt="" class="cursor-pointer">
                         </div>
                     </div>
                     <div class="accordion-content overflow-hidden transition-max-height duration-300 ease-out hidden">
-                        <p class="2xl:mx-96 2xl:mb-8 2xl:ml-12 text-left  text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil obcaecati mollitia quisquam quo delectus voluptas sint sed molestiae veritatis velit.</p>
+                        <p class="px-2 py-2 pt-0 pl-12 2xl:mx-96 2xl:mb-8 2xl:ml-0 text-left  text-white">Lorem ipsum
+                            dolor sit amet consectetur adipisicing elit. Nihil obcaecati mollitia quisquam quo delectus
+                            voluptas sint sed molestiae veritatis velit.</p>
                     </div>
                 </div>
             </section>
-            
-            
-            
-            
-            
-        
-        
-            <section class="mt-12">
+            <div class="mt-10">
+                <a href="javascript:void(0);"
+                    class="bg-custom-green text-black font-bold py-3 px-7 rounded-full hover:shadow-[0_0_16px_0_#7DFFAF] transition-shadow duration-300">
+                    Get a Career Assessment</a>
+
+            </div>
+
+
+
+
+
+
+            <section class="mt-20">
                 <img src="../assets/images/logo/global.svg" alt="Global" class="mx-auto hidden lg:block">
                 <img src="../assets/images/logo/global-mob.svg" alt="Global Mobile" class="mx-auto lg:hidden">
             </section>
             <section class="mt-12  text-left md:text-center">
-                <p class="mt-4 text-lg md:text-xl text-white md:text-base md:font-normal md:font-medium md:leading-28 md:tracking-wide lg:text-2xl lg:tracking-wider">Lorem Ipsum</p>
+                <p
+                    class="mt-4 text-lg md:text-xl text-white md:text-base md:font-normal md:font-medium md:leading-28 md:tracking-wide lg:text-2xl lg:tracking-wider">
+                    Lorem Ipsum</p>
                 <h2
                     class="text-3xl md:text-4xl font-bold text-white md:font-semibold md:tracking-[2.56px] md:leading-normal text-base sm:text-lg sm:font-medium sm:tracking-normal  sm:text-[20px]  sm:leading-[28px]">
                     Workplace skills that boost <br> employability
@@ -257,19 +285,25 @@
                         class="hidden md:block"> organization. </h2>
 
 
-                <div class="mt-8">
-                    <a href="javascript:void(0);" class="bg-custom-green text-black font-bold py-3 px-7 rounded-full hover:shadow-[0_0_16px_0_#7DFFAF] transition-shadow duration-300"> Talk to an Expert </a>
+                <div class="mt-10">
+                    <a href="javascript:void(0);"
+                        class="bg-custom-green text-black font-bold py-3 px-7 rounded-full hover:shadow-[0_0_16px_0_#7DFFAF] transition-shadow duration-300">
+                        Talk to an Expert </a>
 
                 </div>
             </section>
             <section class="mt-12">
                 <img src="../assets/images/logo/vertacx-logo.svg" alt="Vertacx Logo" class="w-48 h-auto mx-auto">
-                <p class="mt-4 text-lg md:text-xl text-white md:font-normal md:font-medium md:leading-170% lg:text-2xl max-w-3xl mx-auto">Gain essential programming skills and develop invaluable soft skills through hands-on learning in a dynamic work- <br class="hidden md:block">based environment.</p>
+                <p
+                    class="mt-6 text-lg md:text-xl text-white md:font-normal md:font-medium md:leading-170% lg:text-2xl max-w-3xl mx-auto">
+                    Gain essential programming skills and develop invaluable soft skills through hands-on learning in a
+                    dynamic work- <br class="hidden md:block">based environment.</p>
 
             </section>
         </div>
     </main>
-    <footer class="bg-black py-4">
+
+    <footer class="bg-black py-4 mt-8">
         <ul class="flex justify-center space-x-4 mb-4">
             <li><a href="javascript:void(0);"><img src="../assets/images/icons/facebook.svg" alt="Facebook"
                         class="w-8 h-8"></a></li>
@@ -278,24 +312,47 @@
             <li><a href="javascript:void(0);"><img src="../assets/images/icons/indenin.svg" alt="LinkedIn"
                         class="w-8 h-8"></a></li>
         </ul>
-        <p class="text-center text-sm text-white">copyright 2024 © Vertacx</p>
+        <p class="text-center text-sm text-white mt-4">copyright 2024 © Vertacx</p>
     </footer>
+    <div id="swipeUpContainer"
+        class="swipe-up-container flex justify-end 2xl:pr-12 pl-2 pb-5 transform scale-0 transition-transform duration-300 fixed bottom-5 right-5"
+        onclick="scrollToTop()">
+        <img src="../assets/images/icons/swipe-up.png" alt="Swipe Up" class="w-12 h-12">
+    </div>
+
+
+
 
 </body>
-<script>
-    const menuToggle = document.getElementById('menuToggle');
-    const sidebar = document.getElementById('sidebar');
 
-    menuToggle.addEventListener('click', () => {
-        sidebar.classList.toggle('hidden');
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const toggleButton = document.getElementById('toggleButton');
+        const sidebarMenu = document.getElementById('sidebarMenu');
+
+        toggleButton.addEventListener('click', () => {
+            sidebarMenu.classList.toggle('hidden');
+        });
     });
 </script>
+
+
+
 <script>
     // Function to handle collapse toggle
     function toggleCollapse(event) {
         const toggle = event.currentTarget;
         const content = toggle.closest('.collapse-parent').querySelector('.accordion-content');
-        
+
+        // Close all other collapsible divs
+        document.querySelectorAll('.accordion-content').forEach(otherContent => {
+            if (otherContent !== content) {
+                otherContent.classList.add('hidden');
+                otherContent.style.maxHeight = null; // Reset max-height when hiding
+            }
+        });
+
+        // Toggle current collapsible div
         content.classList.toggle('hidden');
         if (content.classList.contains('hidden')) {
             content.style.maxHeight = null; // Reset max-height when hiding
@@ -307,6 +364,32 @@
     // Event listeners for each toggle
     document.querySelectorAll('.collapse-toggle').forEach(toggle => {
         toggle.addEventListener('click', toggleCollapse);
+    });
+</script>
+
+
+<script>
+    // Smooth scroll to the top
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Toggle menu on mobile
+    document.getElementById('menuToggle')?.addEventListener('click', function () {
+        var sidebar = document.getElementById('sidebar');
+        sidebar.classList.toggle('hidden');
+    });
+
+    // Show/hide swipe up icon on scroll with scale effect
+    window.addEventListener('scroll', function () {
+        var swipeUpContainer = document.getElementById('swipeUpContainer');
+        if (window.scrollY > 100) {  // Adjust the scroll position value as needed
+            swipeUpContainer.classList.remove('scale-0');
+            swipeUpContainer.classList.add('scale-100');
+        } else {
+            swipeUpContainer.classList.remove('scale-100');
+            swipeUpContainer.classList.add('scale-0');
+        }
     });
 </script>
 
