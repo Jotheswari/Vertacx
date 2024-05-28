@@ -8,6 +8,7 @@ module.exports = {
        'customGreen': '#7DFFAF',
         'black': '#000',
         'white': '#E5F2E3',
+        'customBackground': '#2C2C2C',
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
