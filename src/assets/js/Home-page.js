@@ -22,7 +22,9 @@ $(document).ready(function(){
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    autoplay:true,
+                    speed:300,
                 }
             }
         ]
@@ -59,29 +61,39 @@ window.addEventListener('scroll', function () {
 
 
 // Collapse script
- // Function to handle collapse toggle
- function toggleCollapse(event) {
+// Function to handle collapse toggle
+function toggleCollapse(event) {
     const toggle = event.currentTarget;
     const content = toggle.closest('.collapse-parent').querySelector('.accordion-content');
+    const icon = toggle.querySelector('img');
 
     // Close all other collapsible divs
     document.querySelectorAll('.accordion-content').forEach(otherContent => {
         if (otherContent !== content) {
             otherContent.classList.add('hidden');
-            otherContent.style.maxHeight = null; 
+            otherContent.style.maxHeight = null;
+            const otherToggle = otherContent.closest('.collapse-parent').querySelector('.collapse-toggle');
+            const otherIcon = otherToggle.querySelector('img');
+            otherIcon.src = '../assets/images/icons/collapse-close-icon.svg';
         }
     });
 
     // Toggle current collapsible div
     if (content.classList.contains('hidden')) {
         content.classList.remove('hidden');
-        content.style.maxHeight = content.scrollHeight + "px"; 
+        requestAnimationFrame(() => {
+            content.style.maxHeight = content.scrollHeight + "px";
+        });
+        icon.src = '../assets/images/icons/collapse-open-icon.svg';
     } else {
-        content.style.maxHeight = content.scrollHeight + "px"; 
-        setTimeout(() => {
-            content.style.maxHeight = null; 
-            content.classList.add('hidden');
-        }, 1); 
+        content.style.maxHeight = content.scrollHeight + "px";
+        requestAnimationFrame(() => {
+            content.style.maxHeight = null;
+            setTimeout(() => {
+                content.classList.add('hidden');
+                icon.src = '../assets/images/icons/collapse-close-icon.svg';
+            }, 300); // Duration should match the CSS transition duration
+        });
     }
 }
 
