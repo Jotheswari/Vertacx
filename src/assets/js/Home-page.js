@@ -6,7 +6,7 @@ $(document).ready(function(){
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows:false,
-        autoplay:true,
+        autoplay:false,
         easing: 'ease', 
         responsive: [
             {
@@ -81,12 +81,14 @@ function toggleCollapse(event) {
     // Toggle current collapsible div
     if (content.classList.contains('hidden')) {
         content.classList.remove('hidden');
+        content.classList.add('transition-max-height'); // Add transition class
         requestAnimationFrame(() => {
             content.style.maxHeight = content.scrollHeight + "px";
         });
         icon.src = '../assets/images/icons/collapse-open-icon.svg';
     } else {
         content.style.maxHeight = content.scrollHeight + "px";
+        content.classList.remove('transition-max-height'); // Remove transition class
         requestAnimationFrame(() => {
             content.style.maxHeight = null;
             setTimeout(() => {
@@ -110,6 +112,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const sidebarMenu = document.getElementById('sidebarMenu');
 
     toggleButton.addEventListener('click', () => {
-        sidebarMenu.classList.toggle('hidden');
+        sidebarMenu.classList.toggle('-translate-x-full');
+        sidebarMenu.classList.toggle('translate-x-0');
     });
 });
