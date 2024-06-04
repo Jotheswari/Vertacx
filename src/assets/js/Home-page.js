@@ -45,6 +45,8 @@ document.getElementById('menuToggle')?.addEventListener('click', function () {
     sidebar.classList.toggle('hidden');
 });
 
+
+
 // Show/hide swipe up icon on scroll with scale effect
 window.addEventListener('scroll', function () {
     var swipeUpContainer = document.getElementById('swipeUpContainer');
@@ -116,3 +118,51 @@ document.addEventListener("DOMContentLoaded", function() {
         sidebarMenu.classList.toggle('translate-x-0');
     });
 });
+
+// scroll behaiver
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+});
+
+
+
+// Sticky navabar
+document.addEventListener('scroll', function() {
+    const header = document.getElementById('site-header');
+    const headerContainer = header.querySelector('div');
+
+    if (window.scrollY > 1) {
+        headerContainer.classList.remove('py-20');
+        headerContainer.classList.add('py-4');
+    } else {
+        headerContainer.classList.remove('py-4');
+        headerContainer.classList.add('py-20');
+    }
+});
+
+
+// Adjust anchor link offset based on fixed header height
+(function($, window) {
+    var adjustAnchor = function() {
+        var $anchor = $(':target');
+        var fixedElementHeight = 200; // Set to your fixed header height (adjust as needed)
+
+        if ($anchor.length > 0) {
+            $('html, body').stop().animate({
+                scrollTop: $anchor.offset().top - fixedElementHeight
+            }, 200);
+        }
+    };
+
+    $(window).on('hashchange load', function() {
+        adjustAnchor();
+    });
+})(jQuery, window);

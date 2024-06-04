@@ -77,33 +77,32 @@
     
     
     <!-- Desktop Header -->
-    <header class="hidden md:block py-20 sticky top-0 bg-black z-50">
-        <div class="max-w-custom mx-auto flex items-center justify-between px-4">
+    <header id="site-header" class="hidden md:block sticky top-0 bg-black z-50 transition-all duration-300">
+        <div class="max-w-custom mx-auto flex items-center justify-between px-4 py-20">
             <div class="flex-shrink-0">
                 <img src="../assets/images/logo/vertacx-logo.svg" alt="Vertacx Logo" class="w-48 h-auto">
             </div>
             <nav class="hidden md:flex md:items-center md:space-x-6 lg:space-x-8">
                 <ul class="flex space-x-4 lg:space-x-6">
                     <li><a class="text-white hover:text-customGreen transition-colors" href="#home">Home</a></li>
-                    <li><a class="text-white hover:text-customGreen transition-colors" href="#why-vertax">Why Vertax</a>
-                    </li>
-                    <li><a class="text-white hover:text-customGreen transition-colors" href="#our-programs">Our
-                            Programs</a></li>
-                    <li><a class="text-white hover:text-customGreen transition-colors" href="#how-it-works">How It
-                            Works</a></li>
+                    <li><a class="text-white hover:text-customGreen transition-colors" href="#why-vertax">Why Vertax</a></li>
+                    <li><a class="text-white hover:text-customGreen transition-colors" href="#our-programs">Our Programs</a></li>
+                    <li><a class="text-white hover:text-customGreen transition-colors" href="#how-it-works">How It Works</a></li>
                 </ul>
             </nav>
             <div class="hidden md:block">
-                <button
-                    class="bg-custom-green text-black font-bold py-2 px-4 rounded-full hover:shadow-[0_0_16px_0_#7DFFAF] transition-shadow duration-300"
-                    onclick="location.href='#curriculum'">Curriculum</button>
+                <button class="bg-custom-green text-black font-bold py-2 px-4 rounded-full hover:shadow-[0_0_16px_0_#7DFFAF] transition-shadow duration-300" onclick="location.href='#curriculum'">Curriculum</button>
             </div>
         </div>
     </header>
-    <main class="text-center">
+    
+    
+    
+    
+    <main class="text-center scroll-mt-20 md:pt-24 lg:pt-10" id="home">
             <div class="max-w-custom mx-auto px-4">
                 <h1
-                    class="text-customGreen mt-10 2xl:mt-20 text-4xl md:text-6xl font-semibold leading-10 md:leading-[80px] tracking-[0.64px] md:tracking-[1.28px]">
+                    class="text-customGreen mt-10  text-4xl md:text-6xl font-semibold leading-10 md:leading-[80px] tracking-[0.64px] md:tracking-[1.28px]">
                     Transform Your Future with Industry-ready skills
                 </h1>
                 <p
@@ -124,7 +123,7 @@
                         class="bg-custom-green text-black font-bold py-2 px-4 rounded-full hover:shadow-[0_0_16px_0_#7DFFAF] transition-shadow duration-300">Book
                         a Demo</a>
                 </div>
-                <section class="mt-7 text-left md:text-center">
+                <section class="text-left mt-7 md:text-center scroll-mt-20 md:pt-24 lg:pt-15" id="why-vertax">
                     <h2
                         class="font-poppins font-semibold text-2xl md:text-4xl text-white md:text-customGreen leading-normal md:leading-none tracking-wide md:tracking-normal">
                         Why Vertacx
@@ -172,7 +171,7 @@
                             interactive content for a highly impactful learning experience.</p>
                     </div>
                 </section>
-                <section class="container mx-auto mt-12">
+                <section class="container mx-auto mt-12 scroll-mt-20 md:pt-24 lg:pt-18"  id="our-programs">
 
                     <div
                         class="text-customGreen sm:text-[32px] sm:leading-[28px] sm:tracking-[0.64px]  text-[20px] leading-[26px] tracking-[0.4px] font-semibold">
@@ -241,15 +240,14 @@
                     </div>
                 </section>
 
-                <section class="mt-20">
-                    <p
-                        class="mt-4 text-lg md:text-xl text-white md:text-base md:font-normal md:font-medium md:leading-28 md:tracking-wide lg:text-2xl lg:tracking-wider">
-                        How IT Works</p>
-                    <h2
-                        class="mt-3 mb-5 text-3xl md:text-4xl font-bold text-white md:font-semibold md:tracking-[2.56px] md:leading-normal text-base sm:text-lg sm:font-medium sm:tracking-normal  sm:text-[20px]  sm:leading-[28px]">
-                        Personalized learning at scale.
-                    </h2>
-                </section>
+             <section id="how-it-works" class="mt-14 scroll-mt-20 md:pt-24 lg:pt-14">
+                <p class="mt-4 text-lg md:text-xl text-white md:text-base md:font-normal md:font-medium md:leading-28 md:tracking-wide lg:text-2xl lg:tracking-wider">
+                    How It Works
+                </p>
+                <h2 class="mt-3 mb-5 text-3xl md:text-4xl font-bold text-white md:font-semibold md:tracking-[2.56px] md:leading-normal text-base sm:text-lg sm:font-medium sm:tracking-normal sm:text-[20px] sm:leading-[28px]">
+                    Personalized learning at scale.
+                </h2>
+            </section>
                 <section class="container mx-auto">
                     <!-- Div 1 -->
                     <div class="rounded-md border border-white mb-5 collapse-parent">
@@ -418,5 +416,5 @@
 <!-- Slick Slider JS -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" ></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js" ></script>
-<script type="text/javascript" src="../assets/js/Home-page.js?v=1"></script>
+<script type="text/javascript" src="../assets/js/Home-page.js?v=6"></script>
 </html>
