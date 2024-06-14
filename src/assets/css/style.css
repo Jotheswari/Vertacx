@@ -29,8 +29,8 @@
     border-radius: 4px !important;
     opacity: 0.5 !important;
     transition: opacity 0.3s ease !important;
+    background-color: #022648 !important;
     margin-top: 25px;
-
     &:before {
         display: none !important;
     }
@@ -41,6 +41,9 @@
 }
 .light-mode .slick-dots li button {
     background-color: #022648 !important;
+}
+.dark-mode .slick-dots li button {
+    background-color: #7dffaf !important;
 }
 .slick-slide{
     .silck-dark{
