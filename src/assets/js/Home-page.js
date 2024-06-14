@@ -67,7 +67,9 @@ window.addEventListener('scroll', function () {
 function toggleCollapse(event) {
     const toggle = event.currentTarget;
     const content = toggle.closest('.collapse-parent').querySelector('.accordion-content');
-    const icon = toggle.querySelector('img');
+    const iconDark = toggle.querySelector('.dark-icon');
+    const iconLight = toggle.querySelector('.light-icon');
+    const isDarkMode = document.documentElement.classList.contains('dark');
 
     // Close all other collapsible divs
     document.querySelectorAll('.accordion-content').forEach(otherContent => {
@@ -75,8 +77,10 @@ function toggleCollapse(event) {
             otherContent.classList.add('hidden');
             otherContent.style.maxHeight = null;
             const otherToggle = otherContent.closest('.collapse-parent').querySelector('.collapse-toggle');
-            const otherIcon = otherToggle.querySelector('img');
-            otherIcon.src = '../assets/images/icons/collapse-close-icon.svg';
+            const otherIconDark = otherToggle.querySelector('.dark-icon');
+            const otherIconLight = otherToggle.querySelector('.light-icon');
+            if (otherIconDark) otherIconDark.src = '../assets/images/icons/collapse-close-icon.svg';
+            if (otherIconLight) otherIconLight.src = '../assets/images/icons/collapse-light-close-icon.svg';
         }
     });
 
@@ -87,7 +91,11 @@ function toggleCollapse(event) {
         requestAnimationFrame(() => {
             content.style.maxHeight = content.scrollHeight + "px";
         });
-        icon.src = '../assets/images/icons/collapse-open-icon.svg';
+        if (isDarkMode && iconDark) {
+            iconDark.src = '../assets/images/icons/collapse-open-icon.svg';
+        } else if (iconLight) {
+            iconLight.src = '../assets/images/icons/collapse-light-open-icon.svg';
+        }
     } else {
         content.style.maxHeight = content.scrollHeight + "px";
         content.classList.remove('transition-max-height'); // Remove transition class
@@ -95,7 +103,11 @@ function toggleCollapse(event) {
             content.style.maxHeight = null;
             setTimeout(() => {
                 content.classList.add('hidden');
-                icon.src = '../assets/images/icons/collapse-close-icon.svg';
+                if (isDarkMode && iconDark) {
+                    iconDark.src = '../assets/images/icons/collapse-close-icon.svg';
+                } else if (iconLight) {
+                    iconLight.src = '../assets/images/icons/collapse-light-close-icon.svg';
+                }
             }, 300); // Duration should match the CSS transition duration
         });
     }
@@ -105,6 +117,8 @@ function toggleCollapse(event) {
 document.querySelectorAll('.collapse-toggle').forEach(toggle => {
     toggle.addEventListener('click', toggleCollapse);
 });
+
+
 
 
 
@@ -175,3 +189,28 @@ themeToggle.addEventListener('click', () => {
 
     //
     
+
+// Function to update slick dots based on theme mode
+function updateSlickDots() {
+    var isDarkMode = document.body.classList.contains('dark-mode');
+    var slickDots = document.querySelectorAll('.slick-dots li button');
+
+    slickDots.forEach(function(dot) {
+        if (isDarkMode) {
+            dot.style.backgroundColor = '#7dffaf'; // Dark mode background color
+        } else {
+            dot.style.backgroundColor = '#022648'; // Light mode background color
+        }
+    });
+}
+
+// Call the function initially to set the correct initial theme
+updateSlickDots();
+
+// Add an event listener to the theme toggle if available
+// Replace '#theme-toggle' with your actual theme toggle selector
+document.querySelector('#theme-toggle').addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode'); // Toggle dark mode class on body
+    updateSlickDots(); // Update slick dots based on theme change
+});
+
