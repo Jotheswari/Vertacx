@@ -44,8 +44,8 @@
 .dark-mode .slick-dots li button {
     background-color: #7dffaf !important;
 }
-/* .slick-slide{
+.slick-slide{
     .silck-dark{
         display: none;
     }
-} */
+}
