@@ -149,20 +149,29 @@ document.addEventListener('scroll', function() {
 });
 
 
-// Adjust anchor link offset based on fixed header height
-(function($, window) {
-    var adjustAnchor = function() {
-        var $anchor = $(':target');
-        var fixedElementHeight = 200; // Set to your fixed header height (adjust as needed)
+//script for toggle button
+const themeToggle = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
 
-        if ($anchor.length > 0) {
-            $('html, body').stop().animate({
-                scrollTop: $anchor.offset().top - fixedElementHeight
-            }, 200);
-        }
-    };
+themeToggle.addEventListener('click', () => {
+    if (document.documentElement.classList.contains('dark')) {
+        // Switch from dark to light mode
+        document.documentElement.classList.remove('dark');
+        themeIcon.src = '../assets/images/icons/sun-icon.svg';
+    } else {
+        // Switch from light to dark mode
+        document.documentElement.classList.add('dark');
+        themeIcon.src = '../assets/images/icons/moon-icon.svg';
+    }
+    // Add a class to trigger CSS transition
+    document.documentElement.classList.add('theme-transition');
+    // Remove the transition class after the transition ends
+    setTimeout(() => {
+        document.documentElement.classList.remove('theme-transition');
+    }, 100); // Adjust the timeout based on your CSS transition duration (300ms matches the example CSS)
+});
 
-    $(window).on('hashchange load', function() {
-        adjustAnchor();
-    });
-})(jQuery, window);
+
+
+    //
+    

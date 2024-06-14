@@ -1,14 +1,17 @@
-// tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class', 
   content: ["./src/pages/**/*.{html,js}", "./src/**/*.html"],
   theme: {
     extend: {
       colors: {
-       'customGreen': '#7DFFAF',
+        'customGreen': '#7DFFAF',
         'black': '#000',
         'white': '#E5F2E3',
         'customBackground': '#2C2C2C',
+        'customblue': '#022648',
+        'customviolet': '#BF2AF6',
+        'customblack': '#060F05',
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],

@@ -1,3 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.bg-custom-green {
+    background-color: #7dffaf;
+}
+
+.hover\:shadow-custom-green:hover {
+    box-shadow: 0 0 16px 0 #7dffaf;
+}
+
+.max-w-custom {
+    max-width: 1200px;
+}
+
+.slick-dots {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.slick-dots li {
+    margin: 0 16px !important;
+}
+
+.slick-dots li button {
+    width: 48px !important;
+    height: 8px !important;
+    border-radius: 4px !important;
+    background-color: #7dffaf !important;
+    opacity: 0.5 !important;
+    transition: opacity 0.3s ease !important;
+    margin-top: 25px;
+
+    &:before {
+        display: none !important;
+    }
+}
+
+.slick-dots li.slick-active button {
+    opacity: 1 !important;
+}
+.slick-slide{
+    .silck-dark{
+        display: none;
+    }
+}
