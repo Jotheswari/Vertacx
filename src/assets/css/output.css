@@ -1188,11 +1188,11 @@ video {
   background-color: #7dffaf !important;
 }
 
-.slick-slide{
-  .silck-dark{
-    display: none;
-  }
-}
+/* .slick-slide{
+    .silck-dark{
+        display: none;
+    }
+} */
 
 .hover\:scale-105:hover {
   --tw-scale-x: 1.05;
