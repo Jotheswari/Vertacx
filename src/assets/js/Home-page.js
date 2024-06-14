@@ -31,23 +31,14 @@ $(document).ready(function(){
     });
 });
 
-
-
-
  // Smooth scroll to the top
  function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
-// Toggle menu on mobile
 document.getElementById('menuToggle')?.addEventListener('click', function () {
     var sidebar = document.getElementById('sidebar');
     sidebar.classList.toggle('hidden');
 });
-
-
-
-// Show/hide swipe up icon on scroll with scale effect
 window.addEventListener('scroll', function () {
     var swipeUpContainer = document.getElementById('swipeUpContainer');
     if (window.scrollY > 100) { 
@@ -59,11 +50,7 @@ window.addEventListener('scroll', function () {
     }
 });
 
-
-
-
 // Collapse script
-// Function to handle collapse toggle
 function toggleCollapse(event) {
     const toggle = event.currentTarget;
     const content = toggle.closest('.collapse-parent').querySelector('.accordion-content');
@@ -71,7 +58,6 @@ function toggleCollapse(event) {
     const iconLight = toggle.querySelector('.light-icon');
     const isDarkMode = document.documentElement.classList.contains('dark');
 
-    // Close all other collapsible divs
     document.querySelectorAll('.accordion-content').forEach(otherContent => {
         if (otherContent !== content) {
             otherContent.classList.add('hidden');
@@ -84,10 +70,9 @@ function toggleCollapse(event) {
         }
     });
 
-    // Toggle current collapsible div
     if (content.classList.contains('hidden')) {
         content.classList.remove('hidden');
-        content.classList.add('transition-max-height'); // Add transition class
+        content.classList.add('transition-max-height');
         requestAnimationFrame(() => {
             content.style.maxHeight = content.scrollHeight + "px";
         });
@@ -98,7 +83,7 @@ function toggleCollapse(event) {
         }
     } else {
         content.style.maxHeight = content.scrollHeight + "px";
-        content.classList.remove('transition-max-height'); // Remove transition class
+        content.classList.remove('transition-max-height'); 
         requestAnimationFrame(() => {
             content.style.maxHeight = null;
             setTimeout(() => {
@@ -108,19 +93,13 @@ function toggleCollapse(event) {
                 } else if (iconLight) {
                     iconLight.src = '../assets/images/icons/collapse-light-close-icon.svg';
                 }
-            }, 300); // Duration should match the CSS transition duration
+            }, 300); 
         });
     }
 }
-
-// Event listeners for each toggle
 document.querySelectorAll('.collapse-toggle').forEach(toggle => {
     toggle.addEventListener('click', toggleCollapse);
 });
-
-
-
-
 
 // sidebar script
 document.addEventListener("DOMContentLoaded", function() {
@@ -146,8 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-
 // Sticky navabar
 document.addEventListener('scroll', function() {
     const header = document.getElementById('site-header');
@@ -169,27 +146,17 @@ const themeIcon = document.getElementById('theme-icon');
 
 themeToggle.addEventListener('click', () => {
     if (document.documentElement.classList.contains('dark')) {
-        // Switch from dark to light mode
         document.documentElement.classList.remove('dark');
         themeIcon.src = '../assets/images/icons/sun-icon.svg';
     } else {
-        // Switch from light to dark mode
         document.documentElement.classList.add('dark');
         themeIcon.src = '../assets/images/icons/moon-icon.svg';
     }
-    // Add a class to trigger CSS transition
     document.documentElement.classList.add('theme-transition');
-    // Remove the transition class after the transition ends
     setTimeout(() => {
         document.documentElement.classList.remove('theme-transition');
-    }, 100); // Adjust the timeout based on your CSS transition duration (300ms matches the example CSS)
+    }, 100); 
 });
-
-
-
-    //
-    
-
 // Function to update slick dots based on theme mode
 function updateSlickDots() {
     var isDarkMode = document.body.classList.contains('dark-mode');
@@ -204,13 +171,9 @@ function updateSlickDots() {
     });
 }
 
-// Call the function initially to set the correct initial theme
 updateSlickDots();
-
-// Add an event listener to the theme toggle if available
-// Replace '#theme-toggle' with your actual theme toggle selector
 document.querySelector('#theme-toggle').addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode'); // Toggle dark mode class on body
-    updateSlickDots(); // Update slick dots based on theme change
+    document.body.classList.toggle('dark-mode'); 
+    updateSlickDots(); 
 });
 
