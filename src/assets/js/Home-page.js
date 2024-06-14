@@ -140,40 +140,66 @@ document.addEventListener('scroll', function() {
 });
 
 
-//script for toggle button
-const themeToggle = document.getElementById('theme-toggle');
-const themeIcon = document.getElementById('theme-icon');
+// desktop
+document.addEventListener('DOMContentLoaded', function() {
+    // Desktop version elements
+    const themeToggleDesktop = document.getElementById('theme-toggle-desktop');
+    const themeIconDesktop = document.getElementById('theme-icon-desktop');
 
-themeToggle.addEventListener('click', () => {
-    if (document.documentElement.classList.contains('dark')) {
-        document.documentElement.classList.remove('dark');
-        themeIcon.src = '../assets/images/icons/sun-icon.svg';
-    } else {
-        document.documentElement.classList.add('dark');
-        themeIcon.src = '../assets/images/icons/moon-icon.svg';
+    // Mobile version elements
+    const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+    const themeIconMobile = document.getElementById('theme-icon-mobile');
+
+    // Function to toggle dark mode class on <html> element
+    function toggleDarkMode() {
+        document.documentElement.classList.toggle('dark');
     }
-    document.documentElement.classList.add('theme-transition');
-    setTimeout(() => {
-        document.documentElement.classList.remove('theme-transition');
-    }, 100); 
-});
-// Function to update slick dots based on theme mode
-function updateSlickDots() {
-    var isDarkMode = document.body.classList.contains('dark-mode');
-    var slickDots = document.querySelectorAll('.slick-dots li button');
 
-    slickDots.forEach(function(dot) {
-        if (isDarkMode) {
-            dot.style.backgroundColor = '#7dffaf'; // Dark mode background color
-        } else {
-            dot.style.backgroundColor = '#022648'; // Light mode background color
+    // Function to update theme icon based on current mode
+    function updateTheme() {
+        const isDarkMode = document.documentElement.classList.contains('dark');
+        if (themeIconDesktop) {
+            themeIconDesktop.src = isDarkMode ? '../assets/images/icons/moon-icon.svg' : '../assets/images/icons/sun-icon.svg';
         }
-    });
-}
+        if (themeIconMobile) {
+            themeIconMobile.src = isDarkMode ? '../assets/images/icons/moon-icon.svg' : '../assets/images/icons/sun-icon.svg';
+        }
+    }
 
-updateSlickDots();
-document.querySelector('#theme-toggle').addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode'); 
-    updateSlickDots(); 
+    // Function to update slick dots based on theme mode
+    function updateSlickDots() {
+        const isDarkMode = document.documentElement.classList.contains('dark');
+        const slickDots = document.querySelectorAll('.slick-dots li button');
+
+        slickDots.forEach(function(dot) {
+            dot.style.backgroundColor = isDarkMode ? '#7dffaf' : '#022648';
+        });
+    }
+
+    // Initial update of theme icon and slick dots based on current mode
+    updateTheme();
+    updateSlickDots();
+
+    // Event listeners for theme toggle (desktop)
+    if (themeToggleDesktop) {
+        themeToggleDesktop.addEventListener('click', () => {
+            toggleDarkMode();
+            updateTheme();
+            updateSlickDots();
+        });
+    } else {
+        console.error('theme-toggle-desktop element not found.');
+    }
+
+    // Event listeners for theme toggle (mobile)
+    if (themeToggleMobile) {
+        themeToggleMobile.addEventListener('click', () => {
+            toggleDarkMode();
+            updateTheme();
+            updateSlickDots();
+        });
+    } else {
+        console.error('theme-toggle-mobile element not found.');
+    }
 });
 
