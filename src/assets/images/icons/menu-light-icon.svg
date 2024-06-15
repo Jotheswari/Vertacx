@@ -1,0 +1,17 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 29" width="36" height="29">
+	<title>menu-icon-svg</title>
+	<defs>
+		<image  width="36" height="29" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAdBAMAAAAwW9POAAAAAXNSR0IB2cksfwAAAA9QTFRFff+vAiZIAidIBClJBy9MwgvDpAAAAAV0Uk5TAP///es0PJCtAAAAJ0lEQVR4nGNkEGRABe8ZGQXQhP4zoitiYBgVGiZCWGIbLU0wKp0BAEwMBedP0TCVAAAAAElFTkSuQmCC"/>
+		<image  width="36" height="29" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAdBAMAAAAwW9POAAAAAXNSR0IB2cksfwAAAA9QTFRFAAAA+fr7+fr7+fr7+fr7ODqTmQAAAAV0Uk5TAP8Odfj33trXAAAAI0lEQVR4nGNkwACMg0ZIEM59j0eIyo5gMrpLM+MHxEPUEAIAfv0GHsEjEMUAAAAASUVORK5CYII="/>
+		<image  width="36" height="20" id="img3" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAUBAMAAAAXVIIGAAAAAXNSR0IB2cksfwAAACRQTFRFAAAA+fr7+fr7+fr7+fr7+fr7+fr7+fr7+fr7+fr7Bg8FBg8Fu5BJ4gAAAAx0Uk5TACSi/5AZTunXNxBARt+w/gAAADJJREFUeJxjZMAAjNQWElIEs4V2I4TSz4DZYeVUMH61AJT33w0mZAxXcRaPKrJtpJIQAESPCBXMZRcyAAAAAElFTkSuQmCC"/>
+		<image  width="36" height="18" id="img4" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAASAQMAAAAJ7e5rAAAAAXNSR0IB2cksfwAAAAZQTFRFAAAA+fr7207TMwAAAAJ0Uk5TAP9bkSK1AAAAFklEQVR4nGNkAAFGMsn/DB8FYCRh9QCsSgQT5mvGKQAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		.s0 { opacity: .2;fill: #000000 } 
+	</style>
+	<use id="Layer" href="#img1" x="0" y="0"/>
+	<path id="Layer" class="s0" d="m0.3 4.3c0-2.3 1.7-4 4-4h27.4c2.3 0 4.1 1.7 4.1 4v20.4c0 2.3-1.8 4.1-4 4.1h-27.5c-2.3 0-4-1.8-4-4z"/>
+	<use id="Layer" href="#img2" x="0" y="0"/>
+	<use id="Layer" href="#img3" x="0" y="3"/>
+	<use id="Layer" href="#img4" x="0" y="9"/>
+</svg>

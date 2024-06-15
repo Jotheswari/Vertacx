@@ -131,13 +131,18 @@ document.addEventListener('scroll', function() {
     const headerContainer = header.querySelector('div');
 
     if (window.scrollY > 1) {
+        // Add Tailwind classes for sticky positioning and padding transition
+        header.classList.add('sticky', 'top-0');
         headerContainer.classList.remove('py-20');
         headerContainer.classList.add('py-4');
     } else {
+        // Remove sticky positioning and revert padding transition
+        header.classList.remove('sticky', 'top-0');
         headerContainer.classList.remove('py-4');
         headerContainer.classList.add('py-20');
     }
 });
+
 
 
 // desktop
@@ -172,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const slickDots = document.querySelectorAll('.slick-dots li button');
 
         slickDots.forEach(function(dot) {
-            dot.style.backgroundColor = isDarkMode ? '#7dffaf' : '#022648';
+            dot.style.setProperty('background-color', isDarkMode ? '#7dffaf' : '#022648', 'important');
         });
     }
 
@@ -180,7 +185,15 @@ document.addEventListener('DOMContentLoaded', function() {
     updateTheme();
     updateSlickDots();
 
-    // Event listeners for theme toggle (desktop)
+    // Mutation observer to update slick dots when they are added to the DOM
+    const observer = new MutationObserver(() => {
+        updateSlickDots();
+    });
+
+    // Observe the document for changes
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    // Event listener for theme toggle (desktop)
     if (themeToggleDesktop) {
         themeToggleDesktop.addEventListener('click', () => {
             toggleDarkMode();
@@ -191,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('theme-toggle-desktop element not found.');
     }
 
-    // Event listeners for theme toggle (mobile)
+    // Event listener for theme toggle (mobile)
     if (themeToggleMobile) {
         themeToggleMobile.addEventListener('click', () => {
             toggleDarkMode();
