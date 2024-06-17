@@ -218,27 +218,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //Script for Modal
 const modalButton = document.getElementById('curriculumModalButton');
-        const modal = document.getElementById('curriculumModal');
-        const closeButton = document.getElementById('closeModalButton');
+const modal = document.getElementById('curriculumModal');
+const closeButton = document.getElementById('closeModalButton');
 
-        modalButton.onclick = () => modal.classList.remove('hidden');
-        closeButton.onclick = () => modal.classList.add('hidden');
-        window.onclick = (e) => e.target == modal ? modal.classList.add('hidden') : false;
+modalButton.onclick = () => modal.classList.remove('hidden');
+closeButton.onclick = () => modal.classList.add('hidden');
+window.onclick = (e) => e.target == modal ? modal.classList.add('hidden') : false;
 
 
+//SCript for phone country code
+document.addEventListener('DOMContentLoaded', function () {
+    const phoneInputField = document.getElementById('phone');
+    const iti = window.intlTelInput(phoneInputField, {
+        initialCountry: 'auto',
+        geoIpLookup: function (callback) {
+            fetch('https://ipinfo.io', { headers: { 'Accept': 'application/json' } })
+                .then((resp) => resp.json())
+                .then((resp) => {
+                    const countryCode = resp && resp.country ? resp.country : 'us';
+                    callback(countryCode);
+                });
+        },
+        utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js', // just for formatting/placeholders etc
+    });
+});
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const phoneInputField = document.getElementById('phone');
-            const iti = window.intlTelInput(phoneInputField, {
-                initialCountry: 'auto',
-                geoIpLookup: function (callback) {
-                    fetch('https://ipinfo.io', { headers: { 'Accept': 'application/json' } })
-                        .then((resp) => resp.json())
-                        .then((resp) => {
-                            const countryCode = resp && resp.country ? resp.country : 'us';
-                            callback(countryCode);
-                        });
-                },
-                utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js', // just for formatting/placeholders etc
-            });
-        });
