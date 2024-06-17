@@ -1,17 +1,6 @@
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 29" width="36" height="29">
-	<title>menu-icon-svg</title>
-	<defs>
-		<image  width="36" height="29" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAdBAMAAAAwW9POAAAAAXNSR0IB2cksfwAAAA9QTFRFff+vAiZIAidIBClJBy9MwgvDpAAAAAV0Uk5TAP///es0PJCtAAAAJ0lEQVR4nGNkEGRABe8ZGQXQhP4zoitiYBgVGiZCWGIbLU0wKp0BAEwMBedP0TCVAAAAAElFTkSuQmCC"/>
-		<image  width="36" height="29" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAdBAMAAAAwW9POAAAAAXNSR0IB2cksfwAAAA9QTFRFAAAA+fr7+fr7+fr7+fr7ODqTmQAAAAV0Uk5TAP8Odfj33trXAAAAI0lEQVR4nGNkwACMg0ZIEM59j0eIyo5gMrpLM+MHxEPUEAIAfv0GHsEjEMUAAAAASUVORK5CYII="/>
-		<image  width="36" height="20" id="img3" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAUBAMAAAAXVIIGAAAAAXNSR0IB2cksfwAAACRQTFRFAAAA+fr7+fr7+fr7+fr7+fr7+fr7+fr7+fr7+fr7Bg8FBg8Fu5BJ4gAAAAx0Uk5TACSi/5AZTunXNxBARt+w/gAAADJJREFUeJxjZMAAjNQWElIEs4V2I4TSz4DZYeVUMH61AJT33w0mZAxXcRaPKrJtpJIQAESPCBXMZRcyAAAAAElFTkSuQmCC"/>
-		<image  width="36" height="18" id="img4" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAASAQMAAAAJ7e5rAAAAAXNSR0IB2cksfwAAAAZQTFRFAAAA+fr7207TMwAAAAJ0Uk5TAP9bkSK1AAAAFklEQVR4nGNkAAFGMsn/DB8FYCRh9QCsSgQT5mvGKQAAAABJRU5ErkJggg=="/>
-	</defs>
-	<style>
-		.s0 { opacity: .2;fill: #000000 } 
-	</style>
-	<use id="Layer" href="#img1" x="0" y="0"/>
-	<path id="Layer" class="s0" d="m0.3 4.3c0-2.3 1.7-4 4-4h27.4c2.3 0 4.1 1.7 4.1 4v20.4c0 2.3-1.8 4.1-4 4.1h-27.5c-2.3 0-4-1.8-4-4z"/>
-	<use id="Layer" href="#img2" x="0" y="0"/>
-	<use id="Layer" href="#img3" x="0" y="3"/>
-	<use id="Layer" href="#img4" x="0" y="9"/>
+<svg width="36" height="29" viewBox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.25" y="0.25" width="35.5" height="28.5" rx="4" fill="#022648"/>
+<path d="M27 9.75H9C8.59 9.75 8.25 9.41 8.25 9C8.25 8.59 8.59 8.25 9 8.25H27C27.41 8.25 27.75 8.59 27.75 9C27.75 9.41 27.41 9.75 27 9.75Z" fill="#F1FAF0"/>
+<path d="M27 15.25H9C8.59 15.25 8.25 14.91 8.25 14.5C8.25 14.09 8.59 13.75 9 13.75H27C27.41 13.75 27.75 14.09 27.75 14.5C27.75 14.91 27.41 15.25 27 15.25Z" fill="#F1FAF0"/>
+<path d="M27 20.75H9C8.59 20.75 8.25 20.41 8.25 20C8.25 19.59 8.59 19.25 9 19.25H27C27.41 19.25 27.75 19.59 27.75 20C27.75 20.41 27.41 20.75 27 20.75Z" fill="#F1FAF0"/>
 </svg>

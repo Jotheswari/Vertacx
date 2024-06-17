@@ -45,3 +45,13 @@
 .dark-mode .slick-dots li button {
     background-color: #7dffaf !important;
 } */
+.iti__country-list{
+    max-width: 315px !important;
+}
+.iti--allow-dropdown{
+    width: 100% !important;
+}
+.custom-option{
+    padding: 25px!important;
+    border-bottom: 1px solid #ffffff;
+}
