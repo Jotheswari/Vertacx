@@ -112,6 +112,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
 // scroll behaiver
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -217,13 +218,19 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 //Script for Modal
-const modalButton = document.getElementById('curriculumModalButton');
+const modalButtonMobile = document.getElementById('curriculumModalButtonMobile');
+const modalButtonDesktop = document.getElementById('curriculumModalButtonDesktop');
 const modal = document.getElementById('curriculumModal');
 const closeButton = document.getElementById('closeModalButton');
-
-modalButton.onclick = () => modal.classList.remove('hidden');
+modalButtonMobile.onclick = () => modal.classList.remove('hidden');
+modalButtonDesktop.onclick = () => modal.classList.remove('hidden');
 closeButton.onclick = () => modal.classList.add('hidden');
-window.onclick = (e) => e.target == modal ? modal.classList.add('hidden') : false;
+window.onclick = (e) => {
+    if (e.target == modal) {
+        modal.classList.add('hidden');
+    }
+};
+
 
 
 //SCript for phone country code

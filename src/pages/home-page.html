@@ -19,43 +19,46 @@
 
 <body class="dark:bg-black bg-white font-poppins  transition-colors duration-500">
     <header
-        class="sm:block md:hidden lg:hidden xl:hidden 2xl:hidden pt-10 pb-4 sticky top-0 dark:bg-black bg-white z-50 transition-colors duration-300">
-        <div class="flex items-center justify-between px-4">
-            <img src="../assets/images/logo/vertacx-logo.svg" alt="Vertacx Logo"
-                class="w-[155px] h-auto dark:block hidden" />
-            <img src="../assets/images/logo/vertacx-light-logo.svg" alt="" class="w-[155px] h-auto dark:hidden block">
-            <button id="toggleButton" class="text-white focus:outline-none">
-                <img src="../assets/images/icons/menu-icon.svg" alt="menu-icon" class="dark:block hidden" />
-                <img src="../assets/images/icons/menu-light-icon.svg" alt="menu-icon" class="dark:hidden block" />
-            </button>
-        </div>
-        <nav id="sidebarMenu"
-            class="mt-4 px-4 fixed top-[60] left-0 h-80 w-full dark:bg-black bg-white transform -translate-x-full transition-colors duration-500 ease-out">
-            <ul class="space-y-4 ml-1 mt-5">
-                <li>
-                    <a class="dark:text-white text-customblue hover:text-customGreen transition-colors"
-                        href="#home">Home</a>
-                </li>
-                <li>
-                    <a class="dark:text-white text-customblue hover:text-customGreen transition-colors"
-                        href="#why-vertax">Why Vertax</a>
-                </li>
-                <li>
-                    <a class="dark:text-white text-customblue hover:text-customGreen transition-colors"
-                        href="#our-programs">Our Programs</a>
-                </li>
-                <li>
-                    <a class="dark:text-white text-customblue hover:text-customGreen transition-colors"
-                        href="#how-it-works">How It Works</a>
-                </li>
-            </ul>
-           
-            <button id="theme-toggle-mobile" class="focus:outline-none mt-4">
-                <img id="theme-icon-mobile" src="../assets/images/icons/sun-icon.svg" alt="Toggle Dark/Light Mode"
-                    class="w-8 h-8" />
-            </button>
-        </nav>
-    </header>
+    class="sm:block md:hidden lg:hidden xl:hidden 2xl:hidden pt-10 pb-4 sticky top-0 dark:bg-black bg-white z-50 transition-colors duration-300">
+    <div class="flex items-center justify-between px-4">
+        <img src="../assets/images/logo/vertacx-logo.svg" alt="Vertacx Logo" class="w-[155px] h-auto dark:block hidden" />
+        <img src="../assets/images/logo/vertacx-light-logo.svg" alt="" class="w-[155px] h-auto dark:hidden block">
+        <button id="toggleButton" class="text-white focus:outline-none">
+            <img src="../assets/images/icons/menu-icon.svg" alt="menu-icon" class="dark:block hidden" />
+            <img src="../assets/images/icons/menu-light-icon.svg" alt="menu-icon" class="dark:hidden block" />
+        </button>
+    </div>
+    <nav id="sidebarMenu"
+        class="mt-4 px-4 fixed top2-0 left-0 h-[300px] w-full dark:bg-black bg-white transform -translate-x-full transition-transform duration-500 ease-in-out">
+        <ul class="space-y-4 ml-1 mt-5">
+            <li>
+                <a class="dark:text-white text-customblue hover:text-customGreen transition-colors"
+                    href="#home">Home</a>
+            </li>
+            <li>
+                <a class="dark:text-white text-customblue hover:text-customGreen transition-colors"
+                    href="#why-vertax">Why Vertax</a>
+            </li>
+            <li>
+                <a class="dark:text-white text-customblue hover:text-customGreen transition-colors"
+                    href="#our-programs">Our Programs</a>
+            </li>
+            <li>
+                <a class="dark:text-white text-customblue hover:text-customGreen transition-colors"
+                    href="#how-it-works">How It Works</a>
+            </li>
+        </ul>
+        <button id="curriculumModalButtonMobile"
+            class="dark:bg-custom-green bg-customblue dark:text-black text-white font-bold py-2 px-4 rounded-full dark:hover:shadow-[0_0_16px_0_#7DFFAF] hover:shadow-[0_0_16px_0_#022648] transition-shadow duration-300"
+            onclick="location.href='#curriculum'">
+            Curriculum
+        </button>
+        <button id="theme-toggle-mobile" class="focus:outline-none mt-4 relative top-[10px] right-[-32px]">
+            <img id="theme-icon-mobile" src="../assets/images/icons/sun-icon.svg" alt="Toggle Dark/Light Mode" class="w-8 h-8" />
+        </button>
+    </nav>
+</header>
+
 
     <!-- Desktop Header -->
     <header id="site-header"
@@ -93,7 +96,7 @@
                     <img id="theme-icon-desktop" src="../assets/images/icons/sun-icon.svg" alt="Toggle Dark/Light Mode"
                         class="w-8 h-8" />
                 </button>
-                <button id="curriculumModalButton"
+                <button id="curriculumModalButtonDesktop"
                     class="dark:bg-custom-green bg-customblue dark:text-black text-white font-bold py-2 px-4 rounded-full dark:hover:shadow-[0_0_16px_0_#7DFFAF] hover:shadow-[0_0_16px_0_#022648] transition-shadow duration-300"
                     onclick="location.href='#curriculum'">
                     Curriculum
@@ -491,7 +494,8 @@
         <p class="text-center text-sm dark:text-white text-customblack mt-4 mb-4">
             copyright 2024 © Vertacx
         </p>
-        <p class="text-center dark:text-white text-customblack text-[12px] font-normal leading-5">6A, 4th Floor, GVR complex, <br>
+        <p class="text-center dark:text-white text-customblack text-[12px] font-normal leading-5">6A, 4th Floor, GVR
+            complex, <br>
             Lawson's road, Contonment, Trichy - 620001.</p>
     </footer>
     <div id="swipeUpContainer"
@@ -503,11 +507,12 @@
 </body>
 <!-- Modal Structure -->
 <div id="curriculumModal"
-    class="fixed inset-0 hidden bg-opacity-50 bg-gray-900 flex justify-center items-center z-50 font-poppins">
-    <div class="relative dark:bg-[#f1f1f1] bg-customblue rounded p-6 shadow-lg w-full lg:max-w-[44.688rem] sm:max-w-full py-16 px-8">
-        <button id="closeModalButton" class="absolute top-4 right-2">
+    class="fixed inset-0 hidden bg-opacity-50 bg-gray-900 flex justify-center items-center z-50 font-poppins overflow-y-auto">
+    <div
+        class="relative dark:bg-[#f1f1f1] bg-customblue rounded p-6 shadow-lg w-full max-w-md md:max-w-lg lg:max-w-[44.688rem] py-8 px-4 sm:py-16 sm:px-8">
+        <button id="closeModalButton" class="absolute top-4 right-4">
             <img src="../assets/images/icons/x-icon.png" alt="Close" class="w-5 h-5 dark:hidden block">
-            <img src="../assets/images/icons/x-light-icon.png" alt="Close" class="w-5 h-5 dark:block hidden">
+            <img src="../assets/images/icons/x-light-icon.png" alt="Close" class="w-5 h-5 hidden dark:block">
         </button>
         <form>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
@@ -516,11 +521,21 @@
                         for="interested">WE ARE INTERESTED IN</label>
                     <select id="interested"
                         class="font-semibold block w-full mt-1 p-2 border border-gray-300 dark:bg-[#212121] bg-white dark:text-white text-customblack rounded shadow-sm">
-                        <option value="select an option"  class=" dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">SELECT AN OPTION</option>
-                        <option value="part time" class=" dark:text-white text-customblack bg-white dark:bg-[#212121]  hover:bg-opacity-[40%] rounded">PART TIME</option>
-                        <option value="full time" class=" dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">FULL TIME</option>
-                        <option value="permanent" class=" dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">PERMANENT</option>
-                        <option value="Online" class=" dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">Online</option>
+                        <option value="select an option"
+                            class="dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">
+                            SELECT AN OPTION</option>
+                        <option value="part time"
+                            class="dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">
+                            PART TIME</option>
+                        <option value="full time"
+                            class="dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">
+                            FULL TIME</option>
+                        <option value="permanent"
+                            class="dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">
+                            PERMANENT</option>
+                        <option value="Online"
+                            class="dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">
+                            Online</option>
                     </select>
                 </div>
 
@@ -529,8 +544,12 @@
                         for="weAre">WE ARE</label>
                     <select id="weAre"
                         class="font-semibold block w-full mt-1 p-2 border border-gray-300 dark:bg-[#212121] bg-white dark:text-white text-customblack rounded shadow-sm">
-                        <option value="select an option"  class=" dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">SELECT AN OPTION</option>
-                        <option value="option1"  class=" dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">OPTION 1</option>
+                        <option value="select an option"
+                            class="dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">
+                            SELECT AN OPTION</option>
+                        <option value="option1"
+                            class="dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">
+                            OPTION 1</option>
                     </select>
                 </div>
             </div>
@@ -539,15 +558,19 @@
                     for="stage">WHAT STAGE ARE YOU AT</label>
                 <select id="stage"
                     class="font-semibold block w-full mt-1 p-2 border border-gray-300 dark:bg-[#212121] bg-white dark:text-white text-customblack rounded shadow-sm ">
-                    <option value="select an option"  class=" dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">SELECT AN OPTION</option>
-                    <option value="Option1"  class=" dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">OPTION1</option>
+                    <option value="select an option"
+                        class="dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">
+                        SELECT AN OPTION</option>
+                    <option value="Option1"
+                        class="dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">
+                        OPTION1</option>
                 </select>
             </div>
             <div class="mb-5">
                 <label class="block mb-3 font-medium text-[12px] leading-[15px] dark:text-customblack text-white"
                     for="name">YOUR NAME</label>
                 <input type="text" id="name"
-                    class="font-semibold text-base leading-6 block w-full mt-1 p-2 border border-gray-300 dark:bg-[#212121] bg-white dark:text-white text-customblack rounded shadow-sm  placeholder-customblack dark:placeholder:text-white placeholder-font-semibold placeholder-text-base"
+                    class="font-semibold text-base leading-6 block w-full mt-1 p-2 border border-gray-300 dark:bg-[#212121] bg-white dark:text-white text-customblack rounded shadow-sm placeholder-customblack dark:placeholder:text-white placeholder-font-semibold placeholder-text-base"
                     placeholder="FIRST MIDDLE LAST">
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
@@ -555,34 +578,30 @@
                     <label class="block mb-3 font-medium text-[12px] leading-[15px] dark:text-customblack text-white"
                         for="email">YOUR EMAIL</label>
                     <input type="email" id="email"
-                        class="font-semibold text-base leading-6 block w-full mt-1 p-2 border border-gray-300 dark:bg-[#212121] bg-white dark:text-white text-customblack rounded shadow-sm  placeholder-customblack dark:placeholder:text-white placeholder-font-semibold placeholder-text-base"
+                        class="font-semibold text-base leading-6 block w-full mt-1 p-2 border border-gray-300 dark:bg-[#212121] bg-white dark:text-white text-customblack rounded shadow-sm placeholder-customblack dark:placeholder:text-white placeholder-font-semibold placeholder-text-base"
                         placeholder="email@email.com">
                 </div>
                 <div>
                     <label class="block mb-3 font-medium text-[12px] leading-[15px] dark:text-customblack text-white"
                         for="phone">YOUR PHONE NUMBER</label>
-                        <div class="flex items-center">
-                            <!-- Phone number input field with intl-tel-input -->
-                            <input type="tel" id="phone" class="w-full dark:bg-[#212121] bg-white dark:text-white text-customblack font-semibold flex-1 block mt-0 p-2 pl-2 border border-gray-300 rounded-md shadow-sm  placeholder-customblack dark:placeholder:text-white placeholder-font-semibold placeholder-text-base iti__input">
-                        </div>
+                    <div class="flex items-center">
+                        <input type="tel" id="phone"
+                            class="w-full dark:bg-[#212121] bg-white dark:text-white text-customblack font-semibold flex-1 block mt-0 p-2 pl-2 border border-gray-300 rounded-md shadow-sm placeholder-customblack dark:placeholder:text-white placeholder-font-semibold placeholder-text-base iti__input">
+                    </div>
                 </div>
-
             </div>
             <div class="flex">
-                <p
-                    class=" text-white dark:text-customblack mb-4 max-w-[405px] text-[10px] leading-[15px] font-semibold">
-                    This form collects your contact information so that we can correspond with you.
-                    Check out our <a href="#" class="underline">privacy policy</a> to protect and manage your data.
+                <p class="text-white dark:text-customblack mb-4 max-w-[405px] text-[10px] leading-[15px] font-semibold">
+                    This form collects your contact information so that we can correspond with you. Check out our <a
+                        href="#" class="underline">privacy policy</a> to protect and manage your data.
                 </p>
                 <a href="javscript:void(0);" class="ml-auto"><button type="submit"
-                        class="relative top-[-5px] flex items-center justify-center rounded-xl min-w-[143px] py-2 px-4 dark:bg-[#212121] bg-white  font-semibold shadow-md  focus:outline-none ">
+                        class="relative top-[-5px] flex items-center justify-center rounded-xl min-w-[143px] py-2 px-4 dark:bg-[#212121] bg-white font-semibold shadow-md focus:outline-none">
                         <span
                             class="mr-2 text-customblue dark:text-white font-semibold leading-6 text-[16px]">Submit</span>
-                        <!-- Added margin to the right of the text -->
                         <img src="../assets/images/icons/arrow-icon.svg" alt="" class="dark:hidden block">
                         <img src="../assets/images/icons/arrow-light-icon.svg" alt="" class="dark:block hidden">
-                    </button>
-                </a>
+                    </button></a>
             </div>
         </form>
     </div>
@@ -591,9 +610,11 @@
 
 
 
+
 <!-- Slick Slider JS -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
-<script type="text/javascript" src="../assets/js/Home-page.js?v=20"></script>
+<script type="text/javascript" src="../assets/js/Home-page.js?v=22"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
 </html>
