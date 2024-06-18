@@ -39,12 +39,6 @@
 .slick-dots li.slick-active button {
     opacity: 1 !important;
 }
-/* .light-mode .slick-dots li button {
-    background-color: #022648 !important;
-}
-.dark-mode .slick-dots li button {
-    background-color: #7dffaf !important;
-} */
 .iti__country-list{
     max-width: 315px !important;
 }

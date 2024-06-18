@@ -39,6 +39,9 @@ module.exports = {
       },
       width: {
         'custom': '1140px'
+      },
+      fontDisplay:{
+        'swap':'swap'
       }
     },
   },
@@ -48,5 +51,15 @@ module.exports = {
       cursor: ['disabled'],
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addUtilities }) {
+      const newUtilities = {
+        '.font-display-swap': {
+          fontDisplay: 'swap',
+        },
+      };
+
+      addUtilities(newUtilities, ['responsive']);
+    },
+  ],
 }

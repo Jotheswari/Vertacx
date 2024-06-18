@@ -146,7 +146,7 @@ document.addEventListener('scroll', function() {
 
 
 
-// desktop
+// Dark theme script
 document.addEventListener('DOMContentLoaded', function() {
     // Desktop version elements
     const themeToggleDesktop = document.getElementById('theme-toggle-desktop');
@@ -155,13 +155,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile version elements
     const themeToggleMobile = document.getElementById('theme-toggle-mobile');
     const themeIconMobile = document.getElementById('theme-icon-mobile');
-
-    // Function to toggle dark mode class on <html> element
     function toggleDarkMode() {
         document.documentElement.classList.toggle('dark');
     }
-
-    // Function to update theme icon based on current mode
     function updateTheme() {
         const isDarkMode = document.documentElement.classList.contains('dark');
         if (themeIconDesktop) {
@@ -171,8 +167,6 @@ document.addEventListener('DOMContentLoaded', function() {
             themeIconMobile.src = isDarkMode ? '../assets/images/icons/moon-icon.svg' : '../assets/images/icons/sun-icon.svg';
         }
     }
-
-    // Function to update slick dots based on theme mode
     function updateSlickDots() {
         const isDarkMode = document.documentElement.classList.contains('dark');
         const slickDots = document.querySelectorAll('.slick-dots li button');
@@ -181,20 +175,12 @@ document.addEventListener('DOMContentLoaded', function() {
             dot.style.setProperty('background-color', isDarkMode ? '#7dffaf' : '#022648', 'important');
         });
     }
-
-    // Initial update of theme icon and slick dots based on current mode
     updateTheme();
     updateSlickDots();
-
-    // Mutation observer to update slick dots when they are added to the DOM
     const observer = new MutationObserver(() => {
         updateSlickDots();
     });
-
-    // Observe the document for changes
     observer.observe(document.body, { childList: true, subtree: true });
-
-    // Event listener for theme toggle (desktop)
     if (themeToggleDesktop) {
         themeToggleDesktop.addEventListener('click', () => {
             toggleDarkMode();
@@ -204,8 +190,6 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error('theme-toggle-desktop element not found.');
     }
-
-    // Event listener for theme toggle (mobile)
     if (themeToggleMobile) {
         themeToggleMobile.addEventListener('click', () => {
             toggleDarkMode();
