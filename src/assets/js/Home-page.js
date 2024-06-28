@@ -132,15 +132,13 @@ document.addEventListener('scroll', function() {
     const headerContainer = header.querySelector('div');
 
     if (window.scrollY > 1) {
-        // Add Tailwind classes for sticky positioning and padding transition
-        header.classList.add('sticky', 'top-0');
-        headerContainer.classList.remove('py-20');
+       
+        headerContainer.classList.remove('py-20','transition-all', 'duration-300');
         headerContainer.classList.add('py-4');
     } else {
-        // Remove sticky positioning and revert padding transition
-        header.classList.remove('sticky', 'top-0');
+   
         headerContainer.classList.remove('py-4');
-        headerContainer.classList.add('py-20');
+        headerContainer.classList.add('py-20','transition-all', 'duration-300');
     }
 });
 
