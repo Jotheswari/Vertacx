@@ -228,7 +228,22 @@ document.addEventListener('DOMContentLoaded', function () {
                     callback(countryCode);
                 });
         },
-        utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js', // just for formatting/placeholders etc
+        utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js', // for formatting/placeholders etc
+    });
+
+    // Listen for country changes and update the input with the correct dial code
+    phoneInputField.addEventListener('countrychange', function () {
+        const selectedCountryData = iti.getSelectedCountryData();
+        const dialCode = selectedCountryData.dialCode;
+
+        // Remove any existing dial code from the input value
+        let currentValue = phoneInputField.value;
+        currentValue = currentValue.replace(/^\+\d+\s?/, '');
+
+        // Update the input field with the new dial code
+        phoneInputField.value = `+${dialCode} ${currentValue}`;
     });
 });
+
+
 
