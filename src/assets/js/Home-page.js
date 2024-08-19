@@ -262,3 +262,19 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+//
+document.addEventListener('DOMContentLoaded', function () {
+    const selectElement = document.getElementById('interested');
+    const arrowElement = document.getElementById('dropdown-arrow');
+
+    selectElement.addEventListener('click', function () {
+        arrowElement.classList.toggle('rotate');
+    });
+
+    // Optional: Remove the rotate class when clicking outside the dropdown
+    document.addEventListener('click', function (event) {
+        if (!selectElement.contains(event.target)) {
+            arrowElement.classList.remove('rotate');
+        }
+    });
+});
