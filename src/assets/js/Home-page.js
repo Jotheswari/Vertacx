@@ -278,3 +278,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+//
+document.getElementById('curriculumForm').addEventListener('submit', function (e) {
+    var phoneInput = document.getElementById('phone').value;
+    var phonePattern = /^[0-9]{10}$/;
+
+    if (!phonePattern.test(phoneInput)) {
+        e.preventDefault(); // Stop form submission
+        alert('Please enter a valid phone number with 10 digits.');
+    }
+});

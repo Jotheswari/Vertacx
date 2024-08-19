@@ -457,8 +457,8 @@
         <ul class="flex justify-center space-x-4 mb-4">
             <li>
                 <a href="javascript:void(0);">
-                    <img src="../assets/images/icons/facebook.svg" alt="Facebook" class="w-8 h-8  dark:block hidden" />
-                    <img src="../assets/images/icons/facebook-light.svg" alt="Facebook"
+                    <img src="../assets/images/icons/youtube-light.svg" alt="youtube" class="w-8 h-8  dark:block hidden" />
+                    <img src="../assets/images/icons/youtube-dark.svg" alt="youtube"
                         class="w-8 h-8 dark:hidden block" />
                 </a>
             </li>
@@ -501,12 +501,12 @@
             <img src="../assets/images/icons/x-icon.png" alt="Close" class="w-5 h-5 dark:hidden block">
             <img src="../assets/images/icons/x-light-icon.png" alt="Close" class="w-5 h-5 hidden dark:block">
         </button>
-        <form>
+        <form action ="form_save.php" method="post">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
                 <div class="relative">
                     <label class="block mb-3 font-medium text-xs leading-4 dark:text-customblack text-white"
                         for="interested">WE ARE INTERESTED IN</label>
-                    <select id="interested"
+                    <select id="interested" name="interested" required
                         class="font-semibold block w-full mt-1 p-2 pr-10 border border-gray-300 dark:bg-[#212121] bg-white dark:text-white text-customblack rounded shadow-sm appearance-none custom-select">
                         <option value="select an option"
                             class="dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-40 rounded">
@@ -531,7 +531,7 @@
                 <div  class="relative">
                     <label class="block mb-3 font-medium text-[12px] leading-[15px] dark:text-customblack text-white"
                         for="weAre">PROGRAM TYPE</label>
-                    <select id="weAre"
+                    <select id="weAre" name="weAre" required
                         class="font-semibold block w-full mt-1 p-2 border border-gray-300 dark:bg-[#212121] bg-white dark:text-white text-customblack rounded shadow-sm custom-select">
                         <option value="select an option"
                             class="dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">
@@ -552,7 +552,7 @@
             <div class="mb-5 relative">
                 <label class="block mb-3 font-medium text-[12px] leading-[15px] dark:text-customblack text-white"
                     for="stage">WHAT STAGE ARE YOU AT</label>
-                <select id="stage"
+                <select id="stage" name="stage" required
                     class="font-semibold block w-full mt-1 p-2 border border-gray-300 dark:bg-[#212121] bg-white dark:text-white text-customblack rounded shadow-sm custom-select">
                     <option value="select an option"
                         class="dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">
@@ -581,7 +581,7 @@
             <div class="mb-5">
                 <label class="block mb-3 font-medium text-[12px] leading-[15px] dark:text-customblack text-white"
                     for="name">YOUR NAME</label>
-                <input type="text" id="name"
+                <input type="text" id="name" name="name" required
                     class="font-semibold text-base leading-6 block w-full mt-1 p-2 border border-gray-300 dark:bg-[#212121] bg-white dark:text-white text-customblack rounded shadow-sm placeholder-customblack dark:placeholder:text-white placeholder-font-semibold placeholder-text-base"
                     placeholder="FIRST MIDDLE LAST">
             </div>
@@ -589,7 +589,7 @@
                 <div>
                     <label class="block mb-3 font-medium text-[12px] leading-[15px] dark:text-customblack text-white"
                         for="email">YOUR EMAIL</label>
-                    <input type="email" id="email"
+                    <input type="email" id="email" name="email" required
                         class="font-semibold text-base leading-6 block w-full mt-1 p-2 border border-gray-300 dark:bg-[#212121] bg-white dark:text-white text-customblack rounded shadow-sm placeholder-customblack dark:placeholder:text-white placeholder-font-semibold placeholder-text-base"
                         placeholder="email@email.com">
                 </div>
@@ -597,7 +597,7 @@
                     <label class="block mb-3 font-medium text-[12px] leading-[15px] dark:text-customblack text-white"
                         for="phone">YOUR PHONE NUMBER</label>
                     <div class="flex items-center">
-                        <input type="tel" id="phone"
+                        <input type="tel" id="phone" name="phone" required
                             class="w-full dark:bg-[#212121] bg-white dark:text-white text-customblack font-semibold flex-1 block mt-0 p-2 pl-2 border border-gray-300 rounded-md shadow-sm placeholder-customblack dark:placeholder:text-white placeholder-font-semibold placeholder-text-base iti__input">
                     </div>
                 </div>
