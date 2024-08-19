@@ -247,3 +247,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+//script for form
+document.addEventListener("DOMContentLoaded", function () {
+    // Select all input fields
+    const inputs = document.querySelectorAll("#curriculumModal form input, #curriculumModal form select");
+
+    inputs.forEach((input, index) => {
+        // Add an event listener to each input field
+        input.addEventListener("change", function () {
+            // If the current input is not the last one, move focus to the next input
+            if (index < inputs.length - 1) {
+                inputs[index + 1].focus();
+            }
+        });
+    });
+});
