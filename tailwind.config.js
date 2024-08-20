@@ -12,6 +12,7 @@ module.exports = {
         'customblue': '#022648',
         'customviolet': '#BF2AF6',
         'customblack': '#060F05',
+        'customlightgreen': '#2A7168'
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],

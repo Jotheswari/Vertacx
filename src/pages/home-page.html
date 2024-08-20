@@ -66,7 +66,7 @@
         <button id="curriculumModalButtonMobile"
             class="dark:bg-custom-green bg-customblue dark:text-black text-white font-bold py-2 px-4 rounded-full dark:hover:shadow-[0_0_16px_0_#7DFFAF] hover:shadow-[0_0_16px_0_#022648] transition-shadow duration-300"
             onclick="location.href='#curriculum'">
-            Curriculum
+            Contact Us
         </button>
         <button id="theme-toggle-mobile" class="focus:outline-none mt-4 relative top-[10px] right-[-32px]">
             <img id="theme-icon-mobile" src="../assets/images/icons/sun-icon.svg" alt="Toggle Dark/Light Mode" class="w-8 h-8" />
@@ -115,10 +115,10 @@
                     <img id="theme-icon-desktop" src="../assets/images/icons/sun-icon.svg" alt="Toggle Dark/Light Mode"
                         class="w-8 h-8" />
                 </button>
-                <button id="curriculumModalButtonDesktop"
+            <button id="curriculumModalButtonDesktop"
                     class="dark:bg-custom-green bg-customblue dark:text-black text-white font-bold py-2 px-4 rounded-full dark:hover:shadow-[0_0_16px_0_#7DFFAF] hover:shadow-[0_0_16px_0_#022648] transition-shadow duration-300"
                     onclick="location.href='#curriculum'">
-                    Curriculum
+                    Contact Us 
                 </button>
             </div>
         </div>
@@ -454,7 +454,7 @@
     </main>
 
     <footer class="dark:bg-black bg-white py-4 pt-10 transition-colors duration-300">
-        <ul class="flex justify-center space-x-4 mb-4">
+        <!-- <ul class="flex justify-center space-x-4 mb-4">
             <li>
                 <a href="javascript:void(0);">
                     <img src="../assets/images/icons/youtube-light.svg" alt="youtube" class="w-8 h-8  dark:block hidden" />
@@ -477,7 +477,7 @@
                         class="w-8 h-8 dark:hidden block" />
                 </a>
             </li>
-        </ul>
+        </ul> -->
         <p class="text-center text-sm dark:text-white text-customblack mt-4 mb-4">
             copyright 2024 © Vertacx
         </p>
@@ -496,126 +496,14 @@
 <div id="curriculumModal"
     class="fixed inset-0 hidden bg-opacity-50 bg-gray-900 flex justify-center items-center z-50 font-poppins overflow-y-auto">
     <div
-        class="relative dark:bg-[#f1f1f1] bg-customblue rounded p-6 shadow-lg w-full max-w-md md:max-w-lg lg:max-w-[44.688rem] py-8 px-4 sm:py-16 sm:px-8">
+        class="relative  bg-customlightgreen rounded p-6 shadow-lg w-full max-w-md md:max-w-lg lg:max-w-[44.688rem] py-8 px-4 sm:py-16 sm:px-8">
         <button id="closeModalButton" class="absolute top-4 right-4">
             <img src="../assets/images/icons/x-icon.png" alt="Close" class="w-5 h-5 dark:hidden block">
             <img src="../assets/images/icons/x-light-icon.png" alt="Close" class="w-5 h-5 hidden dark:block">
         </button>
-        <form action ="form_save.php" method="post">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
-                <div class="relative">
-                    <label class="block mb-3 font-medium text-xs leading-4 dark:text-customblack text-white"
-                        for="interested">WE ARE INTERESTED IN</label>
-                    <select id="interested" name="interested" required
-                        class="font-semibold block w-full mt-1 p-2 pr-10 border border-gray-300 dark:bg-[#212121] bg-white dark:text-white text-customblack rounded shadow-sm appearance-none custom-select">
-                        <option value="select an option"
-                            class="dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-40 rounded">
-                            SELECT AN OPTION</option>
-                        <option value="part time"
-                            class="dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-40 rounded">
-                            Front End Development</option>
-                        <option value="full time"
-                            class="dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-40 rounded">
-                            Back End Development</option>
-                        <option value="permanent"
-                            class="dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-40 rounded">
-                            AI/ML Development</option>
-                        <option value="Online"
-                            class="dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-40 rounded">
-                            Low Code Development</option>
-                    </select>
-                    <span id="dropdown-arrow" class="absolute top-1/2 right-3 transform -translate-y-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-t-gray-600 dark:border-t-white border-l-transparent border-r-transparent pointer-events-none transition-transform duration-200 custom-arrow"></span>
-                </div>
-                
+        
+        <iframe aria-label='Free Career Counselling Form' frameborder="0" style="height:500px;width:99%;border:none;" src='https://zfrmz.in/orIRd7fMK7126EfvtCKV'></iframe>
 
-                <div  class="relative">
-                    <label class="block mb-3 font-medium text-[12px] leading-[15px] dark:text-customblack text-white"
-                        for="weAre">PROGRAM TYPE</label>
-                    <select id="weAre" name="weAre" required
-                        class="font-semibold block w-full mt-1 p-2 border border-gray-300 dark:bg-[#212121] bg-white dark:text-white text-customblack rounded shadow-sm custom-select">
-                        <option value="select an option"
-                            class="dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">
-                            SELECT AN OPTION</option>
-                        <option value="fulltime"
-                            class="dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">
-                            Full Time Offline</option>
-                        <option value="part-time"
-                        class="dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">
-                        Part time Offline</option>
-                        <option value="Online"
-                        class="dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">
-                        Online</option>
-                    </select>
-                    <span id="dropdown-arrow" class="absolute top-1/2 right-3 transform -translate-y-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-t-gray-600 dark:border-t-white border-l-transparent border-r-transparent pointer-events-none transition-transform duration-200 custom-arrow"></span>
-                </div>
-            </div>
-            <div class="mb-5 relative">
-                <label class="block mb-3 font-medium text-[12px] leading-[15px] dark:text-customblack text-white"
-                    for="stage">WHAT STAGE ARE YOU AT</label>
-                <select id="stage" name="stage" required
-                    class="font-semibold block w-full mt-1 p-2 border border-gray-300 dark:bg-[#212121] bg-white dark:text-white text-customblack rounded shadow-sm custom-select">
-                    <option value="select an option"
-                        class="dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">
-                        SELECT AN OPTION</option>
-                    <option value="first-year"
-                    class="dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">
-                    First Year Student</option>
-                    <option value="Second-year"
-                    class="dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">
-                    Second Year Student</option>
-                    <option value="third-year"
-                    class="dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">
-                    3rd Year Student,</option>
-                    <option value="final-year"
-                    class="dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">
-                    Final Year Student</option>
-                    <option value="fresher"
-                    class="dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">
-                    Fresh Graduate</option>
-                    <option value="experience"
-                    class="dark:text-white text-customblack bg-white dark:bg-[#212121] hover:bg-opacity-[40%] rounded">
-                    1-2 years Experience</option>
-                </select>
-                <span id="dropdown-arrow" class="absolute top-1/2 right-3 transform -translate-y-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-t-gray-600 dark:border-t-white border-l-transparent border-r-transparent pointer-events-none transition-transform duration-200 custom-arrow"></span>
-            </div>
-            <div class="mb-5">
-                <label class="block mb-3 font-medium text-[12px] leading-[15px] dark:text-customblack text-white"
-                    for="name">YOUR NAME</label>
-                <input type="text" id="name" name="name" required
-                    class="font-semibold text-base leading-6 block w-full mt-1 p-2 border border-gray-300 dark:bg-[#212121] bg-white dark:text-white text-customblack rounded shadow-sm placeholder-customblack dark:placeholder:text-white placeholder-font-semibold placeholder-text-base"
-                    placeholder="FIRST MIDDLE LAST">
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
-                <div>
-                    <label class="block mb-3 font-medium text-[12px] leading-[15px] dark:text-customblack text-white"
-                        for="email">YOUR EMAIL</label>
-                    <input type="email" id="email" name="email" required
-                        class="font-semibold text-base leading-6 block w-full mt-1 p-2 border border-gray-300 dark:bg-[#212121] bg-white dark:text-white text-customblack rounded shadow-sm placeholder-customblack dark:placeholder:text-white placeholder-font-semibold placeholder-text-base"
-                        placeholder="email@email.com">
-                </div>
-                <div>
-                    <label class="block mb-3 font-medium text-[12px] leading-[15px] dark:text-customblack text-white"
-                        for="phone">YOUR PHONE NUMBER</label>
-                    <div class="flex items-center">
-                        <input type="tel" id="phone" name="phone" required
-                            class="w-full dark:bg-[#212121] bg-white dark:text-white text-customblack font-semibold flex-1 block mt-0 p-2 pl-2 border border-gray-300 rounded-md shadow-sm placeholder-customblack dark:placeholder:text-white placeholder-font-semibold placeholder-text-base iti__input">
-                    </div>
-                </div>
-            </div>
-            <div class="flex">
-                <p class="text-white dark:text-customblack mb-4 max-w-[405px] text-[10px] leading-[15px] font-semibold">
-                    This form collects your contact information so that we can correspond with you. Check out our <a
-                        href="#" class="underline">privacy policy</a> to protect and manage your data.
-                </p>
-                <a href="javscript:void(0);" class="ml-auto"><button type="submit"
-                        class="relative top-[-5px] flex items-center justify-center rounded-xl min-w-[143px] py-2 px-4 dark:bg-[#212121] bg-white font-semibold shadow-md focus:outline-none">
-                        <span
-                            class="mr-2 text-customblue dark:text-white font-semibold leading-6 text-[16px]">Submit</span>
-                        <img src="../assets/images/icons/arrow-icon.svg" alt="" class="dark:hidden block">
-                        <img src="../assets/images/icons/arrow-light-icon.svg" alt="" class="dark:block hidden">
-                    </button></a>
-            </div>
-        </form>
     </div>
 </div>
 
