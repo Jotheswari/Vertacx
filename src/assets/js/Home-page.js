@@ -216,108 +216,50 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //Script for Modal
-const modalButtonMobile = document.getElementById('curriculumModalButtonMobile');
-const modalButtonDesktop = document.getElementById('curriculumModalButtonDesktop');
-const modal = document.getElementById('curriculumModal');
-const closeButton = document.getElementById('closeModalButton');
-modalButtonMobile.onclick = () => modal.classList.remove('hidden');
-modalButtonDesktop.onclick = () => modal.classList.remove('hidden');
-closeButton.onclick = () => modal.classList.add('hidden');
-window.onclick = (e) => {
-    if (e.target == modal) {
-        modal.classList.add('hidden');
-    }
-};
+// const modalButtonMobile = document.getElementById('curriculumModalButtonMobile');
+// const modalButtonDesktop = document.getElementById('curriculumModalButtonDesktop');
+// const modal = document.getElementById('curriculumModal');
+// const closeButton = document.getElementById('closeModalButton');
+// modalButtonMobile.onclick = () => modal.classList.remove('hidden');
+// modalButtonDesktop.onclick = () => modal.classList.remove('hidden');
+// closeButton.onclick = () => modal.classList.add('hidden');
+// window.onclick = (e) => {
+//     if (e.target == modal) {
+//         modal.classList.add('hidden');
+//     }
+// };
 
 
 
 //SCript for phone country code
-document.addEventListener('DOMContentLoaded', function () {
-    const phoneInputField = document.getElementById('phone');
-    const iti = window.intlTelInput(phoneInputField, {
-        initialCountry: 'auto',
-        geoIpLookup: function (callback) {
-            fetch('https://ipinfo.io', { headers: { 'Accept': 'application/json' } })
-                .then((resp) => resp.json())
-                .then((resp) => {
-                    const countryCode = resp && resp.country ? resp.country : 'us';
-                    callback(countryCode);
-                });
-        },
-        utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js', // for formatting/placeholders etc
-    });
+// document.addEventListener('DOMContentLoaded', function () {
+//     const phoneInputField = document.getElementById('phone');
+//     const iti = window.intlTelInput(phoneInputField, {
+//         initialCountry: 'auto',
+//         geoIpLookup: function (callback) {
+//             fetch('https://ipinfo.io', { headers: { 'Accept': 'application/json' } })
+//                 .then((resp) => resp.json())
+//                 .then((resp) => {
+//                     const countryCode = resp && resp.country ? resp.country : 'us';
+//                     callback(countryCode);
+//                 });
+//         },
+//         utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js', // for formatting/placeholders etc
+//     });
 
-    // Listen for country changes and update the input with the correct dial code
-    phoneInputField.addEventListener('countrychange', function () {
-        const selectedCountryData = iti.getSelectedCountryData();
-        const dialCode = selectedCountryData.dialCode;
+//     // Listen for country changes and update the input with the correct dial code
+//     phoneInputField.addEventListener('countrychange', function () {
+//         const selectedCountryData = iti.getSelectedCountryData();
+//         const dialCode = selectedCountryData.dialCode;
 
-        // Remove any existing dial code from the input value
-        let currentValue = phoneInputField.value;
-        currentValue = currentValue.replace(/^\+\d+\s?/, '');
+//         // Remove any existing dial code from the input value
+//         let currentValue = phoneInputField.value;
+//         currentValue = currentValue.replace(/^\+\d+\s?/, '');
 
-        // Update the input field with the new dial code
-        phoneInputField.value = `+${dialCode} ${currentValue}`;
-    });
-});
+//         // Update the input field with the new dial code
+//         phoneInputField.value = `+${dialCode} ${currentValue}`;
+//     });
+// });
 
 
 
-//script for form
-document.addEventListener("DOMContentLoaded", function () {
-    // Select all input fields
-    const inputs = document.querySelectorAll("#curriculumModal form input, #curriculumModal form select");
-
-    inputs.forEach((input, index) => {
-        // Add an event listener to each input field
-        input.addEventListener("change", function () {
-            // If the current input is not the last one, move focus to the next input
-            if (index < inputs.length - 1) {
-                inputs[index + 1].focus();
-            }
-        });
-    });
-});
-//
-document.addEventListener('DOMContentLoaded', function () {
-    const selectElement = document.getElementById('interested');
-    const arrowElement = document.getElementById('dropdown-arrow');
-
-    selectElement.addEventListener('click', function () {
-        arrowElement.classList.toggle('rotate');
-    });
-
-    // Optional: Remove the rotate class when clicking outside the dropdown
-    document.addEventListener('click', function (event) {
-        if (!selectElement.contains(event.target)) {
-            arrowElement.classList.remove('rotate');
-        }
-    });
-});
-//
-document.getElementById('curriculumForm').addEventListener('submit', function (e) {
-    var phoneInput = document.getElementById('phone').value;
-    var phonePattern = /^[0-9]{10}$/;
-
-    if (!phonePattern.test(phoneInput)) {
-        e.preventDefault(); // Stop form submission
-        alert('Please enter a valid phone number with 10 digits.');
-    }
-});
-//
-function updateIframeScrolling() {
-    const iframe = document.getElementById('myIframe');
-    if (window.innerWidth < 768) {
-        // Enable scrolling on smaller screens
-        iframe.setAttribute('scrolling', 'yes');
-    } else {
-        // Disable scrolling on larger screens
-        iframe.setAttribute('scrolling', 'no');
-    }
-}
-
-// Adjust on page load
-updateIframeScrolling();
-
-// Adjust on window resize
-window.addEventListener('resize', updateIframeScrolling);

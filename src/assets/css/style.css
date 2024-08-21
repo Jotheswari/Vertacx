@@ -49,38 +49,4 @@
     padding: 25px!important;
     border-bottom: 1px solid #ffffff;
 }
-/* Add this to your stylesheet */
-/* Custom CSS */
-.custom-select {
-    appearance: none; /* Removes default dropdown arrow */
-    padding-right: 2.5rem; /* Ensure there's space for the arrow icon */
-}
 
-.custom-arrow {
-    position: absolute;
-    top: 70%;
-    right: 0.75rem; /* Adjust positioning as needed */
-    transform: translateY(-50%) rotate(0deg);
-    transition: transform 0.3s ease-in-out; /* Smooth transition for rotation */
-}
-
-/* Rotate arrow when dropdown is open */
-.custom-select:focus + .custom-arrow,
-.custom-select:active + .custom-arrow,
-.custom-select:focus-within + .custom-arrow {
-    transform: translateY(-50%) rotate(180deg);
-}
-
-.custom-iframe {
-    height: calc(100vh - -1rem); /* Adjust this value if needed */
-    width: 100%;
-    border: none;
-    overflow: hidden; /* Ensures no extra scrollbar */
-   
-}
-
-@media (max-width: 767px) {
-    .custom-iframe {
-        overflow: auto; /* Enable scrollbar on small screens */
-    }
-}
