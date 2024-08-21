@@ -1311,6 +1311,22 @@ video {
   transform: translateY(-50%) rotate(180deg);
 }
 
+.custom-iframe {
+  height: calc(100vh - -1rem);
+  /* Adjust this value if needed */
+  width: 100%;
+  border: none;
+  overflow: hidden;
+  /* Ensures no extra scrollbar */
+}
+
+@media (max-width: 767px) {
+  .custom-iframe {
+    overflow: auto;
+    /* Enable scrollbar on small screens */
+  }
+}
+
 .hover\:scale-105:hover {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
@@ -1358,11 +1374,6 @@ video {
 .dark\:border-white:is(.dark *) {
   --tw-border-opacity: 1;
   border-color: rgb(229 242 227 / var(--tw-border-opacity));
-}
-
-.dark\:bg-\[\#f1f1f1\]:is(.dark *) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(241 241 241 / var(--tw-bg-opacity));
 }
 
 .dark\:bg-black:is(.dark *) {
@@ -1691,4 +1702,3 @@ video {
     padding-right: 3rem;
   }
 }
-

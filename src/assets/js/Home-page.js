@@ -288,3 +288,20 @@ document.getElementById('curriculumForm').addEventListener('submit', function (e
         alert('Please enter a valid phone number with 10 digits.');
     }
 });
+//
+function updateIframeScrolling() {
+    const iframe = document.getElementById('myIframe');
+    if (window.innerWidth < 768) {
+        // Enable scrolling on smaller screens
+        iframe.setAttribute('scrolling', 'yes');
+    } else {
+        // Disable scrolling on larger screens
+        iframe.setAttribute('scrolling', 'no');
+    }
+}
+
+// Adjust on page load
+updateIframeScrolling();
+
+// Adjust on window resize
+window.addEventListener('resize', updateIframeScrolling);

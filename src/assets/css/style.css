@@ -71,3 +71,16 @@
     transform: translateY(-50%) rotate(180deg);
 }
 
+.custom-iframe {
+    height: calc(100vh - -1rem); /* Adjust this value if needed */
+    width: 100%;
+    border: none;
+    overflow: hidden; /* Ensures no extra scrollbar */
+   
+}
+
+@media (max-width: 767px) {
+    .custom-iframe {
+        overflow: auto; /* Enable scrollbar on small screens */
+    }
+}
