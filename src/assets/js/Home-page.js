@@ -153,9 +153,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile version elements
     const themeToggleMobile = document.getElementById('theme-toggle-mobile');
     const themeIconMobile = document.getElementById('theme-icon-mobile');
+
+    // Function to toggle dark mode
     function toggleDarkMode() {
         document.documentElement.classList.toggle('dark');
     }
+
+    // Function to update theme icons and other elements
     function updateTheme() {
         const isDarkMode = document.documentElement.classList.contains('dark');
         if (themeIconDesktop) {
@@ -165,20 +169,31 @@ document.addEventListener('DOMContentLoaded', function() {
             themeIconMobile.src = isDarkMode ? '../assets/images/icons/moon-icon.svg' : '../assets/images/icons/sun-icon.svg';
         }
     }
+
+    // Function to update slick dots
     function updateSlickDots() {
         const isDarkMode = document.documentElement.classList.contains('dark');
         const slickDots = document.querySelectorAll('.slick-dots li button');
-
+        
         slickDots.forEach(function(dot) {
             dot.style.setProperty('background-color', isDarkMode ? '#7dffaf' : '#022648', 'important');
         });
     }
+
+    // Set the default mode to dark
+    document.documentElement.classList.add('dark');
+
+    // Initial updates
     updateTheme();
     updateSlickDots();
+
+    // Observe changes to update slick dots
     const observer = new MutationObserver(() => {
         updateSlickDots();
     });
     observer.observe(document.body, { childList: true, subtree: true });
+
+    // Add event listeners for theme toggles
     if (themeToggleDesktop) {
         themeToggleDesktop.addEventListener('click', () => {
             toggleDarkMode();
@@ -198,6 +213,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('theme-toggle-mobile element not found.');
     }
 });
+
 
 //Script for Modal
 const modalButtonMobile = document.getElementById('curriculumModalButtonMobile');
