@@ -6,7 +6,7 @@ $(document).ready(function(){
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows:false,
-        autoplay:false,
+        autoplay:true,
         easing: 'ease', 
         responsive: [
             {
