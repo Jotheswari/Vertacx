@@ -65,8 +65,8 @@ function toggleCollapse(event) {
             const otherToggle = otherContent.closest('.collapse-parent').querySelector('.collapse-toggle');
             const otherIconDark = otherToggle.querySelector('.dark-icon');
             const otherIconLight = otherToggle.querySelector('.light-icon');
-            if (otherIconDark) otherIconDark.src = '../Vertacx/src/assets/images/icons/collapse-close-icon.svg';
-            if (otherIconLight) otherIconLight.src = '../Vertacx/src/assets/images/icons/collapse-light-close-icon.svg';
+            if (otherIconDark) otherIconDark.src = '../src/assets/images/icons/collapse-close-icon.svg';
+            if (otherIconLight) otherIconLight.src = '../src/assets/images/icons/collapse-light-close-icon.svg';
         }
     });
 
@@ -77,9 +77,9 @@ function toggleCollapse(event) {
             content.style.maxHeight = content.scrollHeight + "px";
         });
         if (isDarkMode && iconDark) {
-            iconDark.src = '../Vertacx/src/assets/images/icons/collapse-open-icon.svg';
+            iconDark.src = '../src/assets/images/icons/collapse-open-icon.svg';
         } else if (iconLight) {
-            iconLight.src = '../Vertacx/src/assets/images/icons/collapse-light-open-icon.svg';
+            iconLight.src = '../src/assets/images/icons/collapse-light-open-icon.svg';
         }
     } else {
         content.style.maxHeight = content.scrollHeight + "px";
@@ -89,9 +89,9 @@ function toggleCollapse(event) {
             setTimeout(() => {
                 content.classList.add('hidden');
                 if (isDarkMode && iconDark) {
-                    iconDark.src = '../Vertacx/src/assets/images/icons/collapse-close-icon.svg';
+                    iconDark.src = '../src/assets/images/icons/collapse-close-icon.svg';
                 } else if (iconLight) {
-                    iconLight.src = '../Vertacx/src/assets/images/icons/collapse-light-close-icon.svg';
+                    iconLight.src = '../src/assets/images/icons/collapse-light-close-icon.svg';
                 }
             }, 300); 
         });
@@ -163,10 +163,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateTheme() {
         const isDarkMode = document.documentElement.classList.contains('dark');
         if (themeIconDesktop) {
-            themeIconDesktop.src = isDarkMode ? '../Vertacx/src/assets/images/icons/moon-icon.svg' : '../Vertacx/src/assets/images/icons/sun-icon.svg';
+            themeIconDesktop.src = isDarkMode ? '../src/assets/images/icons/moon-icon.svg' : '../src/assets/images/icons/sun-icon.svg';
         }
         if (themeIconMobile) {
-            themeIconMobile.src = isDarkMode ? '../Vertacx/src/assets/images/icons/moon-icon.svg' : '../Vertacx/src/assets/images/icons/sun-icon.svg';
+            themeIconMobile.src = isDarkMode ? '../src/assets/images/icons/moon-icon.svg' : '../src/assets/images/icons/sun-icon.svg';
         }
     }
 
