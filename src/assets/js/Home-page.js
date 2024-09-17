@@ -163,10 +163,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateTheme() {
         const isDarkMode = document.documentElement.classList.contains('dark');
         if (themeIconDesktop) {
-            themeIconDesktop.src = isDarkMode ? '../src/assets/images/icons/moon-icon.svg' : '../src/assets/images/icons/sun-icon.svg';
+            themeIconDesktop.src = isDarkMode ? '../src/assets/images/icons/sun-icon.svg' : '../src/assets/images/icons/moon-icon.svg';
         }
         if (themeIconMobile) {
-            themeIconMobile.src = isDarkMode ? '../src/assets/images/icons/moon-icon.svg' : '../src/assets/images/icons/sun-icon.svg';
+            themeIconMobile.src = isDarkMode ? '../src/assets/images/icons/sun-icon.svg' : '../src/assets/images/icons/moon-icon.svg';
         }
     }
 
